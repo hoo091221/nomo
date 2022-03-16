@@ -1,0 +1,48 @@
+.title {
+	font-weight: bold;
+	font-size: 30px;
+}
+
+body {
+    background-image: url('img/background.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@keyframes clicked {
+    from {
+        transform: scale(0);
+        opacity: 0
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+#clickEffect {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    pointer-events: none
+}
+
+#clickEffect::after {
+    content: "";
+    display: block;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    border-radius: 50%
+}
+
+#clickEffect.effect {
+    display: block
+}
+
+#clickEffect.effect::after {
+    animation: clicked .5s cubic-bezier(.29, 0, .15, 1)
+}

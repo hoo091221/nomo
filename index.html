@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div id="clickEffect"></div>
+		<center>
+			<img
+				src="img/nomo.png"
+				style="width: 50vw; margin-top: 10vw; opacity: 0.6; margin-bottom: 5vw;"
+			/>
+			<div>
+				<a
+					style="
+						text-decoration-line: none;
+						margin: 2vw;
+						padding: 2vw;
+						font-size: 4vw;
+						font-family: 'Jua', sans-serif;
+						width: 15vw;
+						height: 10vw;
+						background-color: #ff0000;
+						border-radius: 2vw;
+						outline: 0;
+						border: 0;
+					"
+				>
+					국어
+				</a>
+				<a
+					style="
+						text-decoration-line: none;
+						margin: 2vw;
+						padding: 2vw;
+						font-size: 4vw;
+						font-family: 'Jua', sans-serif;
+						width: 15vw;
+						height: 10vw;
+						background-color: #ffa500;
+						border-radius: 2vw;
+						outline: 0;
+						border: 0;
+					"
+				>
+					수학
+				</a>
+				<a
+					href="study/chinese/1.html"
+					style="
+						text-decoration-line: none;
+						margin: 2vw;
+						padding: 2vw;
+						font-size: 4vw;
+						font-family: 'Jua', sans-serif;
+						width: 15vw;
+						height: 10vw;
+						background-color: #fffa82;
+						border-radius: 2vw;
+						outline: 0;
+						border: 0;
+					"
+				>
+					한문
+				</a>
+				<a
+					style="
+						text-decoration-line: none;
+						margin: 2vw;
+						padding: 2vw;
+						font-size: 4vw;
+						font-family: 'Jua', sans-serif;
+						width: 15vw;
+						height: 10vw;
+						background-color: #46aa46;
+						border-radius: 2vw;
+						outline: 0;
+						border: 0;
+					"
+				>
+					과학
+				</a>
+				<a
+					style="
+						text-decoration-line: none;
+						margin: 2vw;
+						padding: 2vw;
+						font-size: 4vw;
+						font-family: 'Jua', sans-serif;
+						width: 15vw;
+						height: 10vw;
+						background-color: #41cdcd;
+						border-radius: 2vw;
+						outline: 0;
+						border: 0;
+					"
+				>
+					사회
+				</a>
+				<a
+					href="study/tech_home/1.html"
+					style="
+						text-decoration-line: none;
+						margin: 2vw;
+						padding: 2vw;
+						font-size: 4vw;
+						font-family: 'Jua', sans-serif;
+						width: 15vw;
+						height: 10vw;
+						background-color: #dd78f6;
+						border-radius: 2vw;
+						outline: 0;
+						border: 0;
+					"
+				>
+					기가
+				</a>
+				<a
+					href="study/english/1.html"
+					style="
+						text-decoration-line: none;
+						margin: 2vw;
+						padding: 2vw;
+						font-size: 4vw;
+						font-family: 'Jua', sans-serif;
+						width: 15vw;
+						height: 10vw;
+						background-color: #9400d3;
+						border-radius: 2vw;
+						outline: 0;
+						border: 0;
+					"
+				>
+					영어
+				</a>
+				<a
+					href="study/music/1.html"
+					style="
+						text-decoration-line: none;
+						margin: 2vw;
+						padding: 2vw;
+						font-size: 4vw;
+						font-family: 'Jua', sans-serif;
+						width: 15vw;
+						height: 10vw;
+						background-color: #000;
+						border-radius: 2vw;
+						outline: 0;
+						border: 0;
+					"
+				>
+					음악
+				</a>
+			</div>
+			<script>
+				let removeTimeOut;
+
+				function clickPosition(e) {
+					const target = document.getElementById('clickEffect'),
+						a = 40; // #clickEffect의 너비 & 높이 값 / 2
+
+					e.button === 0 &&
+						((target.style.transform = `translate(${e.clientX - a}px, ${
+							e.clientY - a
+						}px)`),
+						target.classList.contains('effect')
+							? (clearTimeout(removeTimeOut),
+							  target.classList.remove('effect'),
+							  void target.offsetWidth,
+							  target.classList.add('effect'),
+							  removeEffect())
+							: (target.classList.add('effect'), removeEffect()));
+				}
+
+				function removeEffect() {
+					removeTimeOut = setTimeout(function () {
+						document.getElementById('clickEffect').classList.remove('effect');
+					}, 500); // #clickEffect.effect::after의 시간 (.5s) * 1000
+				}
+
+				document.addEventListener('mousedown', clickPosition);
+			</script>
+		</center>
+	</body>
+</html>
