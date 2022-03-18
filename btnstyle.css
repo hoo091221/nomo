@@ -1,12 +1,5 @@
-.title {
-	font-weight: bold;
-	font-size: 30px;
-}
-
-body {
-    background-image: url('img/background1.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
+h1 {
+	font-family: 'Jua', sans-serif;
 }
 
 @keyframes clicked {
