@@ -6,18 +6,18 @@
 		<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="style.css" />
 	</head>
-	<body>
+	<body onload="showImage()">
 		<div id="clickEffect"></div>
 		<center>
-			<img
+			
+				<img
 				src="img/nomo.png"
 				style="width: 50vw; margin-top: 10vw; opacity: 0.6; margin-bottom: 5vw;"
 			/>
-			<div>
+		</center>
 				<a
 					href="study/korean/1.html"
 					style="
-						margin-top: 10px;
 						text-decoration-line: none;
 						margin: 2vw;
 						padding: 2vw;
@@ -159,7 +159,6 @@
 				>
 					음악
 				</a>
-			</div>
 			<script>
 				let removeTimeOut;
 
@@ -188,22 +187,19 @@
 
 				document.addEventListener('mousedown', clickPosition);
 			</script>
-<!-- 
-			<script>
-				function randombg() {
-					var random = Math.floor(Math.random() * 6) + 0;
-					var bigSize = [
-						"url('img/background1')",
-						"url('img/background2')",
-						"url('img/background3')",
-					];
-					document.getElementById('bodybody').style.backgroundImage = bigSize[random];
+			<script type="text/javascript">
+				var imgArray = new Array();
+				imgArray[0] = 'img/background1.jpg';
+				imgArray[1] = 'img/background2.jpg';
+				imgArray[2] = 'img/background3.jpg';
+				function showImage() {
+					var imgNum = Math.round(Math.random() * 2);
+					// var objImg = document.getElementById('introimg');
+					document.getElementById("introimg").style.backgroundImage = url(imgArray[imgNum]);
+					// objImg.src = imgArray[imgNum];
+					//imgArray[imgNum]
+					setTimeout(showImage, 5000);
 				}
-
-				setTimeout(function () {
-					randombg();
-				}, 30000);
-			</script> -->
-		</center>
+			</script>
 	</body>
 </html>

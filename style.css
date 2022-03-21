@@ -3,11 +3,11 @@
 	font-size: 30px;
 }
 
-body {
+/* body {
     background-image: url('img/background1.jpg');
 	background-repeat: no-repeat;
-	background-size: cover;
-}
+	background-size: height: 100vw;
+} */
 
 @keyframes clicked {
     from {
