@@ -218,22 +218,16 @@
 			<div id="date" class="date"></div>
 			<div id="weekend" class="weekend"></div>
 		</div>
-		<iframe
-			width="0.001"
-			height="0.001"
-			src="https://www.youtube.com/embed/hOODt2lA1BY?autoplay=1"
-			title="YouTube video player"
-			frameborder="0"
-			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-			allowfullscreen
-		></iframe>
+		<audio id="audio" autoplay>
+			<source src="audio/bgm.mp3" />
+		</audio>
 		<!-- 음원 출처
-		Song: LiQWYD - Sunny
-     	Video Link: https://youtu.be/hOODt2lA1BY
-    	 Music provided by Tran•quil•i•ty -->
+		Song: Ikson - Jukebox Video 
+		Link: https://youtu.be/zWw18S7C7_s 
+		Music provided by Tran•quil•i•ty -->
 		<script>
 			let removeTimeOut;
-			
+
 			function clickPosition(e) {
 				const target = document.getElementById('clickEffect'),
 					a = 40; // #clickEffect의 너비 & 높이 값 / 2
@@ -317,19 +311,5 @@
 				setInterval(setClock, 1000); //1초마다 setClock 함수 실행
 			};
 		</script>
-		<!-- <script type="text/javascript">
-				var imgArray = new Array();
-				imgArray[0] = 'img/background1.jpg';
-				imgArray[1] = 'img/background2.jpg';
-				imgArray[2] = 'img/background3.jpg';
-				function showImage() {
-					var imgNum = Math.round(Math.random() * 2);
-					// var objImg = document.getElementById('introimg');
-					document.getElementById("introimg").style.backgroundImage = url(imgArray[imgNum]);
-					// objImg.src = imgArray[imgNum];
-					//imgArray[imgNum]
-					setTimeout(showImage, 5000);
-				}
-			</script> -->
 	</body>
 </html>
