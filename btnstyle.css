@@ -1,7 +1,41 @@
+table, th, td {
+  border-collapse:collapse;
+	border: 1px solid black;
+}
+
 h1 {
 	font-family: 'Jua', sans-serif;
 }
 
+.text1 {
+	font-family: 'Jua', sans-serif;
+	font-size: 1vw;
+}
+.text2 {
+	font-family: 'Jua', sans-serif;
+	font-size: 2vw;
+}
+.text3 {
+	font-family: 'Jua', sans-serif;
+	font-size: 3vw;
+}
+.text4 {
+	font-family: 'Jua', sans-serif;
+	font-size: 4vw;
+}
+.text5 {
+	font-family: 'Jua', sans-serif;
+	font-size: 5vw;
+}
+.text6 {
+	font-family: 'Jua', sans-serif;
+	font-size: 6vw;
+}
+.plus {
+	font-family: 'Jua', sans-serif;
+	font-size: 5vw;
+	color: #9932CC;
+}
 @keyframes clicked {
     from {
         transform: scale(0);
