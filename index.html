@@ -19,6 +19,13 @@
 				background-image: url(img/background0.jpg);
 				background-repeat: no-repeat;
 				background-size: auto 100vw;
+				align-items: center;
+			}
+			@media (max-width:600px){
+	 /*가로 너비가 600px 이하일 때 아래 스타일 적용*/
+			body {
+				background-size: auto 100vh;
+				}
 			}
 
 			.logo {
@@ -29,6 +36,7 @@
 				width: 400px;
 				position: relative;
 				margin-top: 20px;
+				margin-left: 25vw;
 			}
 
 			.int-area: first-child {
@@ -82,10 +90,11 @@
 			}
 
 			.btn-area {
-				margin-top: 30px;
+				margin-top: 3vw;
+				margin-left: 25vw;
 			}
 			.btn-area button {
-				width: 75vw;
+				width: 52.5vw;
 				height: 5vw;
 				background: #166cea;
 				color: #fff;
@@ -122,7 +131,6 @@
 						/>
 					</center>
 				</div>
-				<center>
 					<div class="int-area">
 						<input type="text" name="id" id="id" autocomplete="off" required />
 						<label for="id">USERNAME</label>
@@ -137,13 +145,12 @@
 							LOGIN
 						</button>
 					</div>
-				</center>
 			</from>
 		</section>
 
 		<script>
 			$('#btn').on('click', function () {
-				location.href = 'lobby.html';
+				
 			});
 
 			let id = $('#id');
@@ -161,7 +168,14 @@
 					setTimeout(function () {
 						$('label').removeClass('warning');
 					}, 1500);
+				} else if ($(id).val() == 'hoo091221') {
+					if ($(pw).val() == '4421qq@@') {
+						location.href = 'lobby.html';
+					}
 				}
+					else {
+						alert('비밀번호가 틀렸습니다ㅋㅋㅋ');
+					}
 			});
 		</script>
 		<div id="clickEffect"></div>

@@ -15,6 +15,12 @@
 				background-repeat: no-repeat;
 				background-size: auto 100vw;
 			}
+			@media (max-width:600px){
+	 /*가로 너비가 600px 이하일 때 아래 스타일 적용*/
+			body {
+				background-size: auto 100vh;
+				}
+			}
 			.date {
 				font-family: 'Jua', sans-serif;
 				font-size: 2vw;
@@ -31,7 +37,7 @@
 				font-family: 'Jua', sans-serif;
 				font-size: 2vw;
 				font-weight: bold;
-				color: #000;
+				color: #fff;
 			}
 		</style>
 		<div id="weekendbackground">
@@ -285,8 +291,7 @@
 				} else if (day == '화요일') {
 					document.getElementById('weekend').innerHTML = '오늘 하루도 화이팅!';
 				} else if (day == '수요일') {
-					document.getElementById('weekend').innerHTML =
-						'벌써 일주일의 중간에 왔어! 화이팅!';
+					document.getElementById('weekend').innerHTML = '벌써 일주일의 중간에 왔어! 화이팅!';
 				} else if (day == '목요일') {
 					document.getElementById('weekend').innerHTML = '쪼오~끔만 더 버티자!';
 				} else if (day == '금요일') {
