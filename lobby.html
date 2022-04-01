@@ -5,7 +5,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="style.css" />
-		<link rel="icon" sizes="57x57" href="img/nomoNlogo.png">
+		<link rel="icon" sizes="57x57" href="img/nomoNlogo.png" />
 		<title>nomo</title>
 	</head>
 	<body>
@@ -15,10 +15,10 @@
 				background-repeat: no-repeat;
 				background-size: auto 100vw;
 			}
-			@media (max-width:600px){
-	 /*가로 너비가 600px 이하일 때 아래 스타일 적용*/
-			body {
-				background-size: auto 100vh;
+			@media (max-width: 600px) {
+				/*가로 너비가 600px 이하일 때 아래 스타일 적용*/
+				body {
+					background-size: auto 100vh;
 				}
 			}
 			.date {
@@ -39,13 +39,20 @@
 				font-weight: bold;
 				color: #fff;
 			}
+			.menu {
+				margin-top: 5vw;
+				font-family: 'Jua', sans-serif;
+				font-size: 5vw;
+				font-weight: bold;
+				color: #fff;
+			}
 		</style>
 		<div id="weekendbackground">
 			<div id="clickEffect"></div>
 			<center>
 				<img src="img/nomo.png" style="width: 50vw; opacity: 0.6; margin-bottom: 5vw;" />
 			</center>
-				<a
+			<a
 				href="study/korean/1.html"
 				style="
 					color: #000;
@@ -216,12 +223,13 @@
 			>
 				음악
 			</a>
-				<center>
-			<div id="time" class="time"></div>
-			<div id="date" class="date"></div>
-			<div id="weekend" class="weekend"></div>
+			<center>
+				<div id="time" class="time"></div>
+				<div id="date" class="date"></div>
+				<div id="weekend" class="weekend"></div>
+				<div id="menu" class="menu"></div>
 			</center>
-				</div>
+		</div>
 		<audio id="audio" autoplay>
 			<source src="audio/bgm.mp3" />
 		</audio>
@@ -229,6 +237,41 @@
 		Song: Ikson - Jukebox Video 
 		Link: https://youtu.be/zWw18S7C7_s 
 		Music provided by Tran•quil•i•ty -->
+
+		<script>
+			function lunch() {
+				var dateInfo = new Date();
+				var nowyear = dateInfo.getFullYear();
+				var nowmonth = dateInfo.getMonth() + 1;
+				var nowdate = dateInfo.getDate();
+				var todaydate =
+					nowyear +
+					'' +
+					('00' + nowmonth.toString()).slice(-2) +
+					'' +
+					('00' + nowdate.toString()).slice(-2);
+				const url =
+					'https://open.neis.go.kr/hub/mealServiceDietInfo?ATPT_OFCDC_SC_CODE=' +
+					'S10' +// 학교 코드
+					'&SD_SCHUL_CODE=' +
+					'9111056' +// 시청 코드(맞나?)
+					'&MLSV_YMD=' +
+					todaydate;
+				const request = new XMLHttpRequest();
+				console.log(url);
+				request.open('GET', url, true);
+				request.onload = function () {
+					//console.log(request.responseText);// 긁어온 내용 뿌리기
+					var menu = (request.responseText).slice(0, -731).slice(649).replace(/\./g,'').replace(/[0-9]/g,"");
+					console.log(menu);
+					document.getElementById('menu').innerHTML = menu;
+				};
+				request.send();
+			}
+
+			lunch();
+			//document.getElementById('time').innerHTML = url;
+		</script>
 		<script>
 			let removeTimeOut;
 
@@ -246,13 +289,11 @@
 						  removeEffect())
 						: (target.classList.add('effect'), removeEffect()));
 			}
-
 			function removeEffect() {
 				removeTimeOut = setTimeout(function () {
 					document.getElementById('clickEffect').classList.remove('effect');
 				}, 500); // #clickEffect.effect::after의 시간 (.5s) * 1000
 			}
-
 			document.addEventListener('mousedown', clickPosition);
 		</script>
 		<script>
@@ -291,7 +332,8 @@
 				} else if (day == '화요일') {
 					document.getElementById('weekend').innerHTML = '오늘 하루도 화이팅!';
 				} else if (day == '수요일') {
-					document.getElementById('weekend').innerHTML = '벌써 일주일의 중간에 왔어! 화이팅!';
+					document.getElementById('weekend').innerHTML =
+						'벌써 일주일의 중간에 왔어! 화이팅!';
 				} else if (day == '목요일') {
 					document.getElementById('weekend').innerHTML = '쪼오~끔만 더 버티자!';
 				} else if (day == '금요일') {
