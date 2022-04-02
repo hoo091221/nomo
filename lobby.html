@@ -10,10 +10,40 @@
 	</head>
 	<body>
 		<style>
+			.navbar {
+				z-index: 2;
+				position:fixed;
+				width: 100vw;
+				background-color: #fff;
+				font-family: 'Jua', sans-serif;
+				font-size: 2vw;
+				display: flex;
+				align-items: center;
+			}
+			ul {
+				list-style: none;
+				margin: 0px;
+				padding: 0px;
+			}
+			li {
+				margin: 0 0 0 0;
+				padding: 0 0 0 0;
+				border : 0;
+				float: left;
+			}
+			.navbar a { 
+				color: #000;
+				text-decoration: none;
+				margin-right: 5vw;
+			}
+			::-webkit-scrollbar {
+				display: none;
+			}
 			body {
 				background-image: url(img/background0.jpg);
 				background-repeat: no-repeat;
-				background-size: auto 100vw;
+				background-size: 200vw 400vh;
+				margin: 0px;
 			}
 			@media (max-width: 600px) {
 				/*가로 너비가 600px 이하일 때 아래 스타일 적용*/
@@ -42,193 +72,211 @@
 			.menu {
 				margin-top: 5vw;
 				font-family: 'Jua', sans-serif;
-				font-size: 5vw;
+				font-size: 2vw;
 				font-weight: bold;
 				color: #fff;
 			}
 		</style>
+		<nav class="navbar">
+			<div class="navbarlogo">
+				<a href="">
+				<img src="img/nomoNlogo.png" style="margin: 1vw;width: 2vw;"/>
+				</a>
+					</div>
+			<ul class="navbarmenu">
+				<li><a href="">급식표</a></li>
+				<li><a href="https://hcs.eduro.go.kr/#/main">자가진단</a></li>
+			</ul>
+		</nav>
 		<div id="weekendbackground">
 			<div id="clickEffect"></div>
-			<center>
-				<img src="img/nomo.png" style="width: 50vw; opacity: 0.6; margin-bottom: 5vw;" />
-			</center>
-			<a
-				href="study/korean/1.html"
-				style="
-					color: #000;
-					text-decoration-line: none;
-					margin: 2vw;
-					padding: 2vw;
-					font-size: 4vw;
-					font-family: 'Jua', sans-serif;
-					width: 15vw;
-					height: 10vw;
-					background-color: #ff0000;
-					border-radius: 2vw;
-					outline: 0;
-					border: 0;
-				"
-			>
-				국어
-			</a>
-			<a
-				href="study/math/1.html"
-				style="
-					color: #000;
-					text-decoration-line: none;
-					margin: 2vw;
-					padding: 2vw;
-					font-size: 4vw;
-					font-family: 'Jua', sans-serif;
-					width: 15vw;
-					height: 10vw;
-					background-color: #ffa500;
-					border-radius: 2vw;
-					outline: 0;
-					border: 0;
-				"
-			>
-				수학
-			</a>
-			<a
-				href="study/chinese/1.html"
-				style="
-					color: #000;
-					text-decoration-line: none;
-					margin: 2vw;
-					padding: 2vw;
-					font-size: 4vw;
-					font-family: 'Jua', sans-serif;
-					width: 15vw;
-					height: 10vw;
-					background-color: #fffa82;
-					border-radius: 2vw;
-					outline: 0;
-					border: 0;
-				"
-			>
-				한문
-			</a>
-			<a
-				href="study/science/1.html"
-				style="
-					color: #000;
-					text-decoration-line: none;
-					margin: 2vw;
-					padding: 2vw;
-					font-size: 4vw;
-					font-family: 'Jua', sans-serif;
-					width: 15vw;
-					height: 10vw;
-					background-color: #46aa46;
-					border-radius: 2vw;
-					outline: 0;
-					border: 0;
-				"
-			>
-				과학
-			</a>
-			<a
-				href="study/social_studies/1.html"
-				style="
-					color: #000;
-					text-decoration-line: none;
-					margin: 2vw;
-					padding: 2vw;
-					font-size: 4vw;
-					font-family: 'Jua', sans-serif;
-					width: 15vw;
-					height: 10vw;
-					background-color: #41cdcd;
-					border-radius: 2vw;
-					outline: 0;
-					border: 0;
-				"
-			>
-				사회
-			</a>
-			<a
-				href="study/tech_home/1.html"
-				style="
-					color: #000;
-					text-decoration-line: none;
-					margin: 2vw;
-					padding: 2vw;
-					font-size: 4vw;
-					font-family: 'Jua', sans-serif;
-					width: 15vw;
-					height: 10vw;
-					background-color: #dd78f6;
-					border-radius: 2vw;
-					outline: 0;
-					border: 0;
-				"
-			>
-				기가
-			</a>
-			<a
-				href="study/english/1.html"
-				style="
-					color: #000;
-					text-decoration-line: none;
-					margin: 2vw;
-					padding: 2vw;
-					font-size: 4vw;
-					font-family: 'Jua', sans-serif;
-					width: 15vw;
-					height: 10vw;
-					background-color: #9400d3;
-					border-radius: 2vw;
-					outline: 0;
-					border: 0;
-				"
-			>
-				영어
-			</a>
-			<a
-				href="study/morality/1.html"
-				style="
-					text-decoration-line: none;
-					margin: 2vw;
-					padding: 2vw;
-					font-size: 4vw;
-					font-family: 'Jua', sans-serif;
-					width: 15vw;
-					height: 10vw;
-					background-color: #ff64e3;
-					border-radius: 2vw;
-					outline: 0;
-					border: 0;
-					color: #000;
-				"
-			>
-				도덕
-			</a>
-			<a
-				href="study/music/1.html"
-				style="
-					text-decoration-line: none;
-					margin: 2vw;
-					padding: 2vw;
-					font-size: 4vw;
-					font-family: 'Jua', sans-serif;
-					width: 15vw;
-					height: 10vw;
-					background-color: #000;
-					border-radius: 2vw;
-					outline: 0;
-					border: 0;
-					color: #fff;
-				"
-			>
-				음악
-			</a>
-			<center>
-				<div id="time" class="time"></div>
-				<div id="date" class="date"></div>
-				<div id="weekend" class="weekend"></div>
-				<div id="menu" class="menu"></div>
-			</center>
+			<div class="1box" style="margin-bottom: 10vw;">
+				<center>
+					<img
+						src="img/nomo.png"
+						style="z-index: 1;width: 50vw; opacity: 0.6; margin-top: 10vw; margin-bottom: 5vw;"
+					/>
+				</center>
+				<a
+					href="study/korean/1.html"
+					style="
+						color: #000;
+						text-decoration-line: none;
+						margin: 2vw;
+						padding: 2vw;
+						font-size: 4vw;
+						font-family: 'Jua', sans-serif;
+						width: 15vw;
+						height: 10vw;
+						background-color: #ff0000;
+						border-radius: 2vw;
+						outline: 0;
+						border: 0;
+					"
+				>
+					국어
+				</a>
+				<a
+					href="study/math/1.html"
+					style="
+						color: #000;
+						text-decoration-line: none;
+						margin: 2vw;
+						padding: 2vw;
+						font-size: 4vw;
+						font-family: 'Jua', sans-serif;
+						width: 15vw;
+						height: 10vw;
+						background-color: #ffa500;
+						border-radius: 2vw;
+						outline: 0;
+						border: 0;
+					"
+				>
+					수학
+				</a>
+				<a
+					href="study/chinese/1.html"
+					style="
+						color: #000;
+						text-decoration-line: none;
+						margin: 2vw;
+						padding: 2vw;
+						font-size: 4vw;
+						font-family: 'Jua', sans-serif;
+						width: 15vw;
+						height: 10vw;
+						background-color: #fffa82;
+						border-radius: 2vw;
+						outline: 0;
+						border: 0;
+					"
+				>
+					한문
+				</a>
+				<a
+					href="study/science/1.html"
+					style="
+						color: #000;
+						text-decoration-line: none;
+						margin: 2vw;
+						padding: 2vw;
+						font-size: 4vw;
+						font-family: 'Jua', sans-serif;
+						width: 15vw;
+						height: 10vw;
+						background-color: #46aa46;
+						border-radius: 2vw;
+						outline: 0;
+						border: 0;
+					"
+				>
+					과학
+				</a>
+				<a
+					href="study/social_studies/1.html"
+					style="
+						color: #000;
+						text-decoration-line: none;
+						margin: 2vw;
+						padding: 2vw;
+						font-size: 4vw;
+						font-family: 'Jua', sans-serif;
+						width: 15vw;
+						height: 10vw;
+						background-color: #41cdcd;
+						border-radius: 2vw;
+						outline: 0;
+						border: 0;
+					"
+				>
+					사회
+				</a>
+				<a
+					href="study/tech_home/1.html"
+					style="
+						color: #000;
+						text-decoration-line: none;
+						margin: 2vw;
+						padding: 2vw;
+						font-size: 4vw;
+						font-family: 'Jua', sans-serif;
+						width: 15vw;
+						height: 10vw;
+						background-color: #dd78f6;
+						border-radius: 2vw;
+						outline: 0;
+						border: 0;
+					"
+				>
+					기가
+				</a>
+				<a
+					href="study/english/1.html"
+					style="
+						color: #000;
+						text-decoration-line: none;
+						margin: 2vw;
+						padding: 2vw;
+						font-size: 4vw;
+						font-family: 'Jua', sans-serif;
+						width: 15vw;
+						height: 10vw;
+						background-color: #9400d3;
+						border-radius: 2vw;
+						outline: 0;
+						border: 0;
+					"
+				>
+					영어
+				</a>
+				<a
+					href="study/morality/1.html"
+					style="
+						text-decoration-line: none;
+						margin: 2vw;
+						padding: 2vw;
+						font-size: 4vw;
+						font-family: 'Jua', sans-serif;
+						width: 15vw;
+						height: 10vw;
+						background-color: #ff64e3;
+						border-radius: 2vw;
+						outline: 0;
+						border: 0;
+						color: #000;
+					"
+				>
+					도덕
+				</a>
+				<a
+					href="study/music/1.html"
+					style="
+						text-decoration-line: none;
+						margin: 2vw;
+						padding: 2vw;
+						font-size: 4vw;
+						font-family: 'Jua', sans-serif;
+						width: 15vw;
+						height: 10vw;
+						background-color: #000;
+						border-radius: 2vw;
+						outline: 0;
+						border: 0;
+						color: #fff;
+					"
+				>
+					음악
+				</a>
+			</div>
+			<div class="2box">
+				<center>
+					<div id="time" class="time"></div>
+					<div id="date" class="date"></div>
+					<div id="weekend" class="weekend"></div>
+					<div id="menu" class="menu"></div>
+				</center>
+			</div>
 		</div>
 		<audio id="audio" autoplay>
 			<source src="audio/bgm.mp3" />
@@ -243,7 +291,7 @@
 				var dateInfo = new Date();
 				var nowyear = dateInfo.getFullYear();
 				var nowmonth = dateInfo.getMonth() + 1;
-				var nowdate = dateInfo.getDate();
+				var nowdate = 04; // dateInfo.getDate();
 				var todaydate =
 					nowyear +
 					'' +
@@ -252,17 +300,20 @@
 					('00' + nowdate.toString()).slice(-2);
 				const url =
 					'https://open.neis.go.kr/hub/mealServiceDietInfo?ATPT_OFCDC_SC_CODE=' +
-					'S10' +// 학교 코드
+					'S10' + // 학교 코드
 					'&SD_SCHUL_CODE=' +
-					'9111056' +// 시청 코드(맞나?)
+					'9111056' + // 시청 코드(맞나?)
 					'&MLSV_YMD=' +
 					todaydate;
 				const request = new XMLHttpRequest();
 				console.log(url);
 				request.open('GET', url, true);
 				request.onload = function () {
-					//console.log(request.responseText);// 긁어온 내용 뿌리기
-					var menu = (request.responseText).slice(0, -731).slice(649).replace(/\./g,'').replace(/[0-9]/g,"");
+					var menu = "<span style='font-size: 3vw;'>오늘의 급식 메뉴<br></span>" + request.responseText
+						.slice(0, -731)
+						.slice(649)
+						.replace(/\./g, '')
+						.replace(/[0-9]/g, '');
 					console.log(menu);
 					document.getElementById('menu').innerHTML = menu;
 				};
