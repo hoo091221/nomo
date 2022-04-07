@@ -10,9 +10,21 @@
 	</head>
 	<body>
 		<style>
+			body {
+				background-image: url(img/background0.jpg);
+				background-repeat: no-repeat;
+				background-size: auto 100vw;
+				align-items: center;
+			}
+			@media (max-width:600px){
+	 /*가로 너비가 600px 이하일 때 아래 스타일 적용*/
+			body {
+				background-size: auto 100vh;
+				}
+			}
 			.navbar {
 				z-index: 2;
-				position:fixed;
+				position: fixed;
 				width: 100vw;
 				background-color: #fff;
 				font-family: 'Jua', sans-serif;
@@ -28,10 +40,10 @@
 			li {
 				margin: 0 0 0 0;
 				padding: 0 0 0 0;
-				border : 0;
+				border: 0;
 				float: left;
 			}
-			.navbar a { 
+			.navbar a {
 				color: #000;
 				text-decoration: none;
 				margin-right: 5vw;
@@ -80,9 +92,9 @@
 		<nav class="navbar">
 			<div class="navbarlogo">
 				<a href="">
-				<img src="img/nomoNlogo.png" style="margin: 1vw;width: 2vw;"/>
+					<img src="img/nomoNlogo.png" style="margin: 1vw; width: 2vw;" />
 				</a>
-					</div>
+			</div>
 			<ul class="navbarmenu">
 				<li><a href="">급식표</a></li>
 				<li><a href="https://hcs.eduro.go.kr/#/main">자가진단</a></li>
@@ -94,7 +106,13 @@
 				<center>
 					<img
 						src="img/nomo.png"
-						style="z-index: 1;width: 50vw; opacity: 0.6; margin-top: 10vw; margin-bottom: 5vw;"
+						style="
+							z-index: 1;
+							width: 50vw;
+							opacity: 0.6;
+							margin-top: 10vw;
+							margin-bottom: 5vw;
+						"
 					/>
 				</center>
 				<a
@@ -291,7 +309,7 @@
 				var dateInfo = new Date();
 				var nowyear = dateInfo.getFullYear();
 				var nowmonth = dateInfo.getMonth() + 1;
-				var nowdate = 04; // dateInfo.getDate();
+				var nowdate = dateInfo.getDate();
 				var todaydate =
 					nowyear +
 					'' +
@@ -306,22 +324,38 @@
 					'&MLSV_YMD=' +
 					todaydate;
 				const request = new XMLHttpRequest();
-				console.log(url);
 				request.open('GET', url, true);
 				request.onload = function () {
-					var menu = "<span style='font-size: 3vw;'>오늘의 급식 메뉴<br></span>" + request.responseText
-						.slice(0, -731)
-						.slice(649)
-						.replace(/\./g, '')
-						.replace(/[0-9]/g, '');
-					console.log(menu);
+					var menu =
+						"<span style='font-size: 3vw;'>오늘의 급식 메뉴<br></span>" +
+						request.responseText
+							.slice(0, -731)
+							.slice(649)
+							.replace(/\./g, '')
+							.replace(/[0-9]/g, '');
 					document.getElementById('menu').innerHTML = menu;
 				};
 				request.send();
+
 			}
+			//if (menu == "<span style='font-size: 3vw;'>오늘의 급식 메뉴<br></span>") {
+			//		var menu = "<br><br><br><br><br><br><br>"
+			//	}
 
 			lunch();
-			//document.getElementById('time').innerHTML = url;
+		</script>
+		<script>
+			//날씨
+			function weather() {
+				const request1 = new XMLHttpRequest();
+				const url1 = 'https://www.weather.go.kr/w/index.do#';
+				console.log(url1);
+				request1.open('GET', url1, true);
+				request1.onload = function () {
+					console.log(request1.onload);
+				};
+			}
+			weather();
 		</script>
 		<script>
 			let removeTimeOut;

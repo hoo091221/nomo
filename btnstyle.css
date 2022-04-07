@@ -1,6 +1,10 @@
 table, th, td {
   border-collapse:collapse;
 	border: 1px solid black;
+	font-family: 'Jua', sans-serif;
+	width: 90vw;
+	height: 5vh;
+	font-size: 3vw;
 }
 
 h1 {
