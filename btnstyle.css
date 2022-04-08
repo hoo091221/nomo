@@ -7,6 +7,14 @@ table, th, td {
 	font-size: 3vw;
 }
 
+.button {
+	background-color: blue;
+	font-family: 'Jua', sans-serif;
+	padding: 1vw;
+	border-radius: 1vw;
+	border: 0px;
+	font-size: 2.5vw;
+}
 h1 {
 	font-family: 'Jua', sans-serif;
 }

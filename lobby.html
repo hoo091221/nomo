@@ -10,18 +10,6 @@
 	</head>
 	<body>
 		<style>
-			body {
-				background-image: url(img/background0.jpg);
-				background-repeat: no-repeat;
-				background-size: auto 100vw;
-				align-items: center;
-			}
-			@media (max-width:600px){
-	 /*가로 너비가 600px 이하일 때 아래 스타일 적용*/
-			body {
-				background-size: auto 100vh;
-				}
-			}
 			.navbar {
 				z-index: 2;
 				position: fixed;
@@ -293,9 +281,11 @@
 					<div id="date" class="date"></div>
 					<div id="weekend" class="weekend"></div>
 					<div id="menu" class="menu"></div>
+					<div id="word" class="word"></div>
 				</center>
 			</div>
 		</div>
+
 		<audio id="audio" autoplay>
 			<source src="audio/bgm.mp3" />
 		</audio>
@@ -304,6 +294,19 @@
 		Link: https://youtu.be/zWw18S7C7_s 
 		Music provided by Tran•quil•i•ty -->
 
+		<script>
+			function word() {
+				const request = new XMLHttpRequest();
+				const url = 'https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=%EC%98%A4%EB%8A%98%EC%9D%98+%EC%98%81%EC%96%B4+%EB%8B%A8%EC%96%B4&oquery=%EC%98%A4%EB%8A%98%EC%9D%98+%EC%98%81%EC%96%B4+%EB%8B%A8%EC%96%B4+.app&tqi=hCJDdsprvTossSZeaElssssst6K-269957.html'; // 긁어오고 싶은 주소를 넣는다. 예제는 네이버
+
+				request.open('GET', url, true);
+				request.onload = function () {
+					console.log(request.responseText); // 긁어온 내용 뿌리기
+				};
+				request.send();
+			}
+			word();
+		</script>
 		<script>
 			function lunch() {
 				var dateInfo = new Date();
@@ -336,7 +339,6 @@
 					document.getElementById('menu').innerHTML = menu;
 				};
 				request.send();
-
 			}
 			//if (menu == "<span style='font-size: 3vw;'>오늘의 급식 메뉴<br></span>") {
 			//		var menu = "<br><br><br><br><br><br><br>"
@@ -344,7 +346,7 @@
 
 			lunch();
 		</script>
-		<script>
+		<!-- <script>
 			//날씨
 			function weather() {
 				const request1 = new XMLHttpRequest();
@@ -356,7 +358,7 @@
 				};
 			}
 			weather();
-		</script>
+		</script> -->
 		<script>
 			let removeTimeOut;
 
