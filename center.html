@@ -290,26 +290,22 @@
 		<audio id="audio" autoplay>
 			<source src="audio/bgm.mp3" />
 		</audio>
-		<!-- 음원 출처
-		Song: Ikson - Jukebox Video 
-		Link: https://youtu.be/zWw18S7C7_s 
-		Music provided by Tran•quil•i•ty -->
 
 		<script>
 			function scroll() {
 			}
 		</script>
 		<script>
-			/* function word() {
-			 	const request = new XMLHttpRequest();
-			 	const url = 'https://daum.net'
-			 	request.open('GET', url, true);
-			 	request.onload = function () {
-			 		console.log(request.responseText); // 긁어온 내용 뿌리기
-			 	};
-			 	request.send();
-			 }
-			 word();*/
+			// function word() {
+			//  	const request = new XMLHttpRequest();
+			//  	const url = 'https://www.data.go.kr/data/15021148/standard.do'
+			//  	request.open('GET', url, true);
+			//  	request.onload = function () {
+			//  		console.log(request.responseText); // 긁어온 내용 뿌리기
+			//  	};
+			//  	request.send();
+			//  }
+			//  word();
 		</script>
 		<script>
 			function lunch() {
@@ -317,6 +313,7 @@
 				var nowyear = dateInfo.getFullYear();
 				var nowmonth = dateInfo.getMonth() + 1;
 				var nowdate = dateInfo.getDate();
+				
 				var todaydate =
 					nowyear +
 					'' +
@@ -328,11 +325,26 @@
 					'S10' + // 학교 코드
 					'&SD_SCHUL_CODE=' +
 					'9111056' + // 시청 코드(맞나?)
-					'&MLSV_YMD=' +
-					todaydate;
+					'&MLSV_YMD=' + todaydate + 
+					'&key=0329ec2eb15f4888b665ab2b92887d4a'; // 키값
+					var today = new Date();
+				var weekday = new Array(7);
+				weekday[0] = '일요일';
+				weekday[1] = '월요일';
+				weekday[2] = '화요일';
+				weekday[3] = '수요일';
+				weekday[4] = '목요일';
+				weekday[5] = '금요일';
+				weekday[6] = '토요일';
+
+				var day = weekday[today.getDay()];
+				//console.log(day);
 				const request = new XMLHttpRequest();
 				request.open('GET', url, true);
 				request.onload = function () {
+					// if (day == '금요일') {
+					// 	var menu = "<span style='font-size: 3vw;'>오늘의 급식 메뉴<br>주말이네요!</span><br><br><br><br><br>";
+					// }
 					var menu =
 						"<span style='font-size: 3vw;'>오늘의 급식 메뉴<br></span>" +
 						request.responseText
@@ -340,14 +352,11 @@
 							.slice(649)
 							.replace(/\./g, '')
 							.replace(/[0-9]/g, '');
+					
 					document.getElementById('menu').innerHTML = menu;
 				};
 				request.send();
 			}
-			//if (menu == "<span style='font-size: 3vw;'>오늘의 급식 메뉴<br></span>") {
-			//		var menu = "<br><br><br><br><br><br><br>"
-			//	}
-
 			lunch();
 		</script>
 		<!-- <script>
