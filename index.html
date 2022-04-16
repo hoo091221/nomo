@@ -291,9 +291,22 @@
 			<source src="audio/bgm.mp3" />
 		</audio>
 
+		<script
+			async
+			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281200359282339"
+			crossorigin="anonymous"
+		></script>
+		<!-- NOMOadvertising -->
+		<ins
+			class="adsbygoogle"
+			style="display: block;"
+			data-ad-client="ca-pub-1281200359282339"
+			data-ad-slot="7482576024"
+			data-ad-format="auto"
+			data-full-width-responsive="true"
+		></ins>
 		<script>
-			function scroll() {
-			}
+			(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
 		<script>
 			// function word() {
@@ -313,7 +326,7 @@
 				var nowyear = dateInfo.getFullYear();
 				var nowmonth = dateInfo.getMonth() + 1;
 				var nowdate = dateInfo.getDate();
-				
+
 				var todaydate =
 					nowyear +
 					'' +
@@ -325,9 +338,10 @@
 					'S10' + // 학교 코드
 					'&SD_SCHUL_CODE=' +
 					'9111056' + // 시청 코드(맞나?)
-					'&MLSV_YMD=' + todaydate + 
+					'&MLSV_YMD=' +
+					todaydate +
 					'&key=0329ec2eb15f4888b665ab2b92887d4a'; // 키값
-					var today = new Date();
+				var today = new Date();
 				var weekday = new Array(7);
 				weekday[0] = '일요일';
 				weekday[1] = '월요일';
@@ -352,7 +366,7 @@
 							.slice(649)
 							.replace(/\./g, '')
 							.replace(/[0-9]/g, '');
-					
+
 					document.getElementById('menu').innerHTML = menu;
 				};
 				request.send();
