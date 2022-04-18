@@ -1,51 +1,360 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
+		<script src="lunch.json"></script>
+		<script src="time.json"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+			integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+			crossorigin="anonymous"
+		/>
 		<link rel="stylesheet" href="style.css" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" sizes="57x57" href="img/nomoNlogo.png" />
 		<title>nomo</title>
 	</head>
 	<body>
-		<script></script>
-		<center>
-			<div
-				id="ngifdiv"
-				style="
-					background-size: auto 100vh;
-					background-repeat: no-repeat;
-					background-image: url('img/ngif.gif');
-					height: 95vh;
-					width: 60vw;
-				"
-			></div>
-		</center>
-		<script>
-			let images = [];
-
-			function preload() {
-				for (let i = 0; i < preload.arguments.lenght; i++) {
-					images[i] = new Image();
-					images[i].src = preload.arguments.src;
-				}
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+		<style>
+			.navbar {
+				z-index: 2;
+				position: fixed;
+				width: 100vw;
+				background-color: #fff;
+				font-family: 'Jua', sans-serif;
+				font-size: 2vw;
+				display: flex;
+				align-items: center;
 			}
-			function intro() {
-				setTimeout(() => {
-					document.getElementById('ngifdiv').style.backgroundImage =
-						"url('img/nomointroNlogo.png')";
-				}, 1200);
-				setTimeout(() => {
-					location.href = 'center.html';
-				}, 3000);
+			ul {
+				list-style: none;
+				margin: 0px;
+				padding: 0px;
 			}
+			li {
+				margin: 0 0 0 0;
+				padding: 0 0 0 0;
+				border: 0;
+				float: left;
+			}
+			.navbar a {
+				color: #000;
+				text-decoration: none;
+				margin-right: 5vw;
+			}
+			::-webkit-scrollbar {
+				display: none;
+			}
+			/* body {
+				background-image: url(img/background0.jpg);
+				background-repeat: no-repeat;
+				background-size: 200vw 400vh;
+				margin: 0px;
+			} */
 
-			
-			preload('img/nomointroNlogo.png').then(function(){
-				console.log('abc');
-				intro();
-			});
-		</script>
+			.date {
+				font-family: 'Jua', sans-serif;
+				font-size: 2vw;
+				color: #fff;
+			}
+			.time {
+				font-family: 'Jua', sans-serif;
+				margin-top: 5vw;
+				font-size: 10vw;
+				font-weight: bold;
+				color: #fff;
+			}
+			.weekend {
+				font-family: 'Jua', sans-serif;
+				font-size: 2vw;
+				font-weight: bold;
+				color: #fff;
+			}
+			.menu {
+				margin-top: 5vw;
+				font-family: 'Jua', sans-serif;
+				font-size: 2vw;
+				font-weight: bold;
+				color: #fff;
+			}
+		</style>
+		<nav class="navbar">
+			<div class="navbarlogo">
+				<a href="">
+					<img src="img/nomoNlogo.png" style="margin: 1vw; width: 2vw;" />
+				</a>
+			</div>
+			<ul class="navbarmenu">
+				<li><a href="">급식표</a></li>
+				<li><a href="https://hcs.eduro.go.kr/#/main">자가진단</a></li>
+				<li><a href="sorce.html">자료출처</a></li>
+			</ul>
+			<meter
+				id="bar"
+				style="width: 50vw; margin-left: 0px;"
+				value="0"
+				min="0"
+				max="100"
+				low="25"
+				high="50"
+				optimum="10"
+			></meter>
+		</nav>
+		<div id="weekendbackground">
+			<div id="clickEffect"></div>
+			<div class="1box" style="margin-bottom: 10vw;">
+				<center>
+					<img
+						src="img/nomo.png"
+						style="
+							z-index: 1;
+							width: 50vw;
+							opacity: 0.6;
+							margin-top: 10vw;
+							margin-bottom: 5vw;
+						"
+					/>
+				</center>
+				<a
+					href="study/korean/1.html"
+					style="
+						color: #000;
+						text-decoration-line: none;
+						margin: 2vw;
+						padding: 2vw;
+						font-size: 4vw;
+						font-family: 'Jua', sans-serif;
+						width: 15vw;
+						height: 10vw;
+						background-color: #ff0000;
+						border-radius: 2vw;
+						outline: 0;
+						border: 0;
+					"
+				>
+					국어
+				</a>
+				<a
+					href="study/math/1.html"
+					style="
+						color: #000;
+						text-decoration-line: none;
+						margin: 2vw;
+						padding: 2vw;
+						font-size: 4vw;
+						font-family: 'Jua', sans-serif;
+						width: 15vw;
+						height: 10vw;
+						background-color: #ffa500;
+						border-radius: 2vw;
+						outline: 0;
+						border: 0;
+					"
+				>
+					수학
+				</a>
+				<a
+					href="study/chinese/1.html"
+					style="
+						color: #000;
+						text-decoration-line: none;
+						margin: 2vw;
+						padding: 2vw;
+						font-size: 4vw;
+						font-family: 'Jua', sans-serif;
+						width: 15vw;
+						height: 10vw;
+						background-color: #fffa82;
+						border-radius: 2vw;
+						outline: 0;
+						border: 0;
+					"
+				>
+					한문
+				</a>
+				<a
+					href="study/science/1.html"
+					style="
+						color: #000;
+						text-decoration-line: none;
+						margin: 2vw;
+						padding: 2vw;
+						font-size: 4vw;
+						font-family: 'Jua', sans-serif;
+						width: 15vw;
+						height: 10vw;
+						background-color: #46aa46;
+						border-radius: 2vw;
+						outline: 0;
+						border: 0;
+					"
+				>
+					과학
+				</a>
+				<a
+					href="study/social_studies/1.html"
+					style="
+						color: #000;
+						text-decoration-line: none;
+						margin: 2vw;
+						padding: 2vw;
+						font-size: 4vw;
+						font-family: 'Jua', sans-serif;
+						width: 15vw;
+						height: 10vw;
+						background-color: #41cdcd;
+						border-radius: 2vw;
+						outline: 0;
+						border: 0;
+					"
+				>
+					사회
+				</a>
+				<a
+					href="study/tech_home/1.html"
+					style="
+						color: #000;
+						text-decoration-line: none;
+						margin: 2vw;
+						padding: 2vw;
+						font-size: 4vw;
+						font-family: 'Jua', sans-serif;
+						width: 15vw;
+						height: 10vw;
+						background-color: #dd78f6;
+						border-radius: 2vw;
+						outline: 0;
+						border: 0;
+					"
+				>
+					기가
+				</a>
+				<a
+					href="study/english/1.html"
+					style="
+						color: #000;
+						text-decoration-line: none;
+						margin: 2vw;
+						padding: 2vw;
+						font-size: 4vw;
+						font-family: 'Jua', sans-serif;
+						width: 15vw;
+						height: 10vw;
+						background-color: #9400d3;
+						border-radius: 2vw;
+						outline: 0;
+						border: 0;
+					"
+				>
+					영어
+				</a>
+				<a
+					href="study/morality/1.html"
+					style="
+						text-decoration-line: none;
+						margin: 2vw;
+						padding: 2vw;
+						font-size: 4vw;
+						font-family: 'Jua', sans-serif;
+						width: 15vw;
+						height: 10vw;
+						background-color: #ff64e3;
+						border-radius: 2vw;
+						outline: 0;
+						border: 0;
+						color: #000;
+					"
+				>
+					도덕
+				</a>
+				<a
+					href="study/music/1.html"
+					style="
+						text-decoration-line: none;
+						margin: 2vw;
+						padding: 2vw;
+						font-size: 4vw;
+						font-family: 'Jua', sans-serif;
+						width: 15vw;
+						height: 10vw;
+						background-color: #000;
+						border-radius: 2vw;
+						outline: 0;
+						border: 0;
+						color: #fff;
+					"
+				>
+					음악
+				</a>
+			</div>
+			<div class="2box">
+				<center>
+					<div id="time" class="time"></div>
+					<div id="date" class="date"></div>
+					<div id="weekend" class="weekend"></div>
+					<div id="menu" class="menu"></div>
+					<div id="word" class="word"></div>
+				</center>
+			</div>
+		</div>
+
+		<audio id="audio" autoplay>
+			<source src="audio/bgm.mp3" />
+		</audio>
+
 	</body>
 </html>
