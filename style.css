@@ -1,6 +1,7 @@
 body {
     background-image: url('img/background0.jpg');
 	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 @media (width > height) {
 	body {100vw}
@@ -22,10 +23,11 @@ html, body {
 	 /*background: linear-gradient(#123, #111);
 */}
  .snowflake {
-	 --size: 1vw;
-	 width: var(--size);
-	 height: var(--size);
-	 background: white;
+	 --size: 3vw;
+	 width: 3.5vw;
+	 height: 2vw;
+	 /* background: url('img/cherryblossom.png'); */
+	 background: #FFB4B9;
 	 border-radius: 50%;
 	 position: absolute;
 	 top: -5vh;
@@ -447,7 +449,7 @@ html, body {
 	font-weight: bold;
 	font-size: 30px;
 }
-
+/* --------------------------- */
 
 @keyframes clicked {
 	from {
