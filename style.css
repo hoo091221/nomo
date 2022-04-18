@@ -24,8 +24,8 @@ html, body {
 */}
  .snowflake {
 	 --size: 3vw;
-	 width: 3.5vw;
-	 height: 2vw;
+	 width: 2.5vw;
+	 height: 1vw;
 	 /* background: url('img/cherryblossom.png'); */
 	 background: #FFB4B9;
 	 border-radius: 50%;
