@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"
+		></script>
 		<script src="lunch.json"></script>
 		<script src="time.json"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,56 +24,60 @@
 		<title>nomo</title>
 	</head>
 	<body>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
-<div class="snowflake"></div>
+		
+		
+		
+		
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
+		<div class="snowflake"></div>
 		<style>
 			.navbar {
 				z-index: 2;
@@ -131,6 +140,20 @@
 				font-weight: bold;
 				color: #fff;
 			}
+
+			/* @media (width > height) {
+				body {
+					background-size: 100vw auto;
+				}
+			}
+			@media (width < height) {
+				body {
+					background-size: auto 100vh;
+				}
+			} */
+			body {
+				background-size: cover;
+			}
 		</style>
 		<nav class="navbar">
 			<div class="navbarlogo">
@@ -152,9 +175,9 @@
 				low="25"
 				high="50"
 				optimum="10"
-			></meter> -->
+			></meter>-->
 		</nav>
-		<div id="weekendbackground">
+		<div class="weekendbackground" id="weekendbackground">
 			<div id="clickEffect"></div>
 			<div class="1box" style="margin-bottom: 10vw;">
 				<center>
@@ -331,7 +354,7 @@
 						font-family: 'Jua', sans-serif;
 						width: 15vw;
 						height: 10vw;
-						background: linear-gradient( to right, yellow, red);
+						background: linear-gradient(to right, yellow, red);
 						border-radius: 2vw;
 						outline: 0;
 						border: 0;
@@ -348,13 +371,35 @@
 					<div id="weekend" class="weekend"></div>
 					<div id="menu" class="menu"></div>
 					<div id="word" class="word"></div>
+					<div id="tell" class="tell"></div>
 				</center>
 			</div>
 		</div>
-
 		<audio id="audio" autoplay>
 			<source src="audio/bgm.mp3" />
 		</audio>
-
+		<script>
+			function bg() {
+				var randomNumber = Math.floor(Math.random() * 6);
+				document.body.style.backgroundImage =
+					'url(' + 'img/background' + randomNumber + '.jpg' + ')';
+				var tell = [
+					"희망은 어떤 상황에서도 필요하다", 
+					"성공이 그렇게 달콤한 것은 결코 성공하지 못한 사람들이 있기 때문이다",
+					"인생에서 실패한 사람 중 다수는 성공을 목전에 두고도 모른 채 포기한 이들이다",
+					"시간은 환상이다. 점심시간은 두 배로 그렇다",
+					"시간은 인간이 쓸 수 있는 가장 값진 것이다",
+					"어디를 가든지 마음을 다해 가라",
+					"누구도 본인의 동의없이 남을 지배할 만큼 훌륭하지는 않다",
+					"자존심은 가장 고귀한 인격을 망친다",
+					"사탕발린 칭찬이 아닌 분별있는 애정의 증표로 친구를 사귀어라",
+					"긴 하루 끝에 좋은 책이 기다리고 있다는 생각만으로 그날은 더 행복해진다",
+					"무엇을 잘 하는 것은 시간낭비일 때가 많다";
+				];
+				let pick = Math.floor(Math.random() * tell.length);
+				document.getElementById('tell').innerHTML = pick;
+			}
+			bg();
+		</script>
 	</body>
 </html>

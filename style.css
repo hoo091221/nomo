@@ -1,13 +1,9 @@
 body {
-    background-image: url('img/background0.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
-@media (width > height) {
-	body {100vw}
-}
-@media (width < height) {
-	body {100vh}
+.weekendbackground {
+	background-attachment: fixed;
 }
 
 * {
