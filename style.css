@@ -22,8 +22,6 @@ html, body {
 	 --size: 3vw;
 	 width: 2.5vw;
 	 height: 1vw;
-	 /* background: url('img/cherryblossom.png'); */
-	 background: #FFB4B9;
 	 border-radius: 50%;
 	 position: absolute;
 	 top: -5vh;
