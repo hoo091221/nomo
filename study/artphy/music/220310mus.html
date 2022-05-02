@@ -4,118 +4,9 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
-		<link rel="stylesheet" href="../../btnstyle.css" />
+		<link rel="stylesheet" href="../../../btnstyle.css" />
 		<link rel="icon" sizes="57x57" href="../../img/nomoNlogo.png" />
 		<title>nomo</title>
-		<!-- <script src="jquery.mobile/jquery-1.7.2.min"></script>
- 
- 
-<script src="jquery.mobile/jquery.mobile-1.1.0.min.js"></script>
-  
- 
-<script type="text/javascript" charset="utf-8">
- 
- 
-var sCaption = "도는 하얀 도화지"
-
-
-
-
-
-
-
- 
-var timerCaption = null;
- 
- 
-var index = 0;
- 
- 
-function startTimer() {
- 
- 
-index = 0;
- 
- 
-timerCaption = setInterval(nextIndex,400);
- 
- 
-}
- 
- 
-function nextIndex() {
- 
- 
-index ++;
- 
- 
-drawCanvas();
- 
- 
-if( index >= sCaption.length )
- 
- 
-clearInterval(timerCaption);
- 
- 
-}
- 
- 
-function init() {
- 
- 
-drawCanvas();
- 
- 
-}
- 
- 
-function drawCanvas() {
- 
- 
-var canvas = document.getElementById("canvas");
- 
- 
-var ctx =canvas.getContext("2d");
- 
- 
-ctx.fillStyle = "#333333";
- 
- 
-ctx.fillRect(0, 0, canvas.width,canvas.height);
- 
- 
-ctx.textBaseline = "top";
- 
- 
-ctx.font = "15px " +"serif";
- 
- 
-var nx = 5;
- 
- 
-var ny = 20;
- 
- 
-ctx.fillStyle = "#FFFFFF";
- 
- 
-ctx.fillText(sCaption, nx, ny);
- 
- 
-var sPart = sCaption.slice(0, index);
- 
- 
-ctx.fillStyle = "#AAAAFF";
- 
- 
-ctx.fillText(sPart, nx, ny);
- 
- 
-}
- 
- 
-</script> -->
 	</head>
 	<body onload="init();" id="stage" class="theme">
 		<center>
@@ -138,9 +29,6 @@ ctx.fillText(sPart, nx, ny);
 					height: 100vw;
 				"
 			></div>
-			<!-- <canvas id="canvas" width="320" height="100" style="border: 1px solid#c3c3c3;"></canvas>
-
-			<input type="button" value="Start" onClick="startTimer();" /> -->
 			<iframe
 				width="560"
 				height="315"
@@ -153,7 +41,7 @@ ctx.fillText(sPart, nx, ny);
 		</center>
 		<script>
 			function music1() {
-				var audio = new Audio('../../audio/doremi1.mp3');
+				var audio = new Audio('../../../audio/doremi1.mp3');
 				audio.play();
 			}
 
@@ -267,7 +155,7 @@ ctx.fillText(sPart, nx, ny);
 				document.getElementById('music').style.height = '120vh';
 				document.getElementById('music').style.backgroundImage =
 					"url('musicfile/doremisong/1.JPG')";
-				var audio = new Audio('../../audio/doremi.mp3');
+				var audio = new Audio('../../../audio/doremi.mp3');
 				audio.play();
 				//	document.getElementById(button).style.visibility = "hidden";
 				setTimeout(
@@ -288,7 +176,7 @@ ctx.fillText(sPart, nx, ny);
 				document.getElementById('music').style.height = '300vh';
 				document.getElementById('music').style.backgroundImage =
 					"url('https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FkPqsU%2Fbtq5xuClPLA%2FukBQyFPxePdRZobsVXrsMk%2Fimg.jpg')";
-				var audio = new Audio('../../audio/doremi1.mp3');
+				var audio = new Audio('../../../audio/doremi1.mp3');
 				audio.play();
 			}
 		</script>
