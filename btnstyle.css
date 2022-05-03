@@ -7,6 +7,11 @@ table, th, td {
 	font-size: 3vw;
 }
 
+.ex {
+	font-family: 'Jua', sans-serif;
+	color: green;
+}
+
 .playbutton {
 	background-color: #AAFFFF;
 	font-family: 'Jua', sans-serif;
@@ -19,6 +24,7 @@ table, th, td {
 }
 h1 {
 	font-family: 'Jua', sans-serif;
+	font-size: 5vw;
 }
 
 .bluetext {
