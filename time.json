@@ -6,7 +6,7 @@ function setClock(){
     var year = dateInfo.getFullYear();
     var month = dateInfo.getMonth()+1; //monthIndex를 반환해주기 때문에 1을 더해준다.
     var date = dateInfo.getDate();
-    document.getElementById("time").innerHTML = hour + ":" + min  + ":" + sec;
+    document.getElementById("time").innerHTML = hour + "시 " + min  + "분 " + sec + "초";
     document.getElementById("date").innerHTML = year + "년 " + month + "월 " + date + "일";
 	var today = new Date();
 var weekday = new Array(7);
@@ -17,6 +17,7 @@ weekday[3] = "수요일";
 weekday[4] = "목요일";
 weekday[5] = "금요일";
 weekday[6] = "토요일";
+
 
 var day = weekday[today.getDay()];
 
@@ -38,6 +39,7 @@ var day = weekday[today.getDay()];
 		document.getElementById('weekend').innerHTML = '아안돼애 내일이 월요일이야';
 		document.getElementById('weekendbackground').style.backgroundImage = "url('img/com--unscreen.gif')";
 	}
+	
 }
 function modifyNumber(time){
     if(parseInt(time)<10){
