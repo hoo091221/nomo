@@ -27,6 +27,13 @@ h1 {
 	font-size: 5vw;
 }
 
+.red {
+	color: red;
+}
+.redtext {
+	color: red;
+}
+
 .blue {
 	color: blue;
 }
