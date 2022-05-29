@@ -27,15 +27,11 @@
 				weekday[4] = '목요일';
 				weekday[5] = '금요일';
 				weekday[6] = '토요일';
-
 				var day = weekday[today.getDay()];
-				//console.log(day);
+				
 				const request = new XMLHttpRequest();
 				request.open('GET', url, true);
 				request.onload = function () {
-					// if (day == '금요일') {
-					// 	var menu = "<span style='font-size: 3vw;'>오늘의 급식 메뉴<br>주말이네요!</span><br><br><br><br><br>";
-					// }
 					var menu =
 						"<span style='font-size: 3vw;'>오늘의 급식 메뉴<br></span>" +
 						request.responseText
@@ -43,10 +39,10 @@
 							.slice(649)
 							.replace(/\./g, '')
 							.replace(/[0-9]/g, '');
-
 					document.getElementById('menu').innerHTML = menu;
 				};
 				request.send();
 			}
-			lunch();
 
+
+lunch();

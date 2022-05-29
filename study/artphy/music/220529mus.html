@@ -8,43 +8,75 @@
 		<link rel="icon" sizes="57x57" href="../../img/nomoNlogo.png" />
 		<title>nomo</title>
 	</head>
-	<body onload="init();" id="stage" class="theme">
+	<body>
 		<center>
+			<!-- <input type="checkbox" id="chk-hear-mic" /><label for="chk-hear-mic"
+				>마이크 소리 듣기</label
+			> -->
+
 			<div id="sound-clips"></div>
+
 			<button class="playbutton" id="record">녹음</button>
 			<button class="playbutton" id="stop">정지</button>
-
-			<button id="button" class="playbutton" onclick="doremi()">
+			<button id="button" class="playbutton" onclick="music()">
 				일반 ▶
 			</button>
-			<button id="button" class="playbutton" onclick="doremi1()">
+			<button id="button" class="playbutton" onclick="music1()">
 				반주 ▶
+			</button>
+			<button id="button" class="playbutton" onclick="music2()">
+				윗 성부 ▶
+			</button>
+			<button id="button" class="playbutton" onclick="music3()">
+				아랫 성부 ▶
 			</button>
 			<div
 				id="music"
 				style="
-					background-size: 90vw;
+					background-size: 90vw 100vh;
 					background-repeat: no-repeat;
 					width: 90vw;
-					height: 100vw;
+					height: 100vh;
 				"
 			></div>
-			<iframe
-				width="560"
-				height="315"
-				src="https://www.youtube.com/embed/_IeXl7zFpYg"
-				title="YouTube video player"
-				frameborder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-				allowfullscreen
-			></iframe>
 		</center>
 		<script>
-			function music1() {
-				var audio = new Audio('../../../audio/doremi1.mp3');
+			function music() {
+				document.getElementById('music').style.backgroundImage =
+					"url('musicfile/MussIDenn/1.JPG')";
+				var audio = new Audio('../../../audio/Muss_I_Denn.mp3');
 				audio.play();
 			}
 
+			function music1() {
+				document.getElementById('music').style.backgroundImage =
+					"url('musicfile/MussIDenn/1.JPG')";
+				var audio = new Audio('../../../audio/Muss_I_Denn1.mp3');
+				audio.play();
+			}
+
+			function music2() {
+				document.getElementById('music').style.backgroundImage =
+					"url('musicfile/MussIDenn/1.JPG')";
+				var audio = new Audio('../../../audio/mussidenn1.mp3');
+				audio.play();
+			}
+
+			function music3() {
+				document.getElementById('music').style.backgroundImage =
+					"url('musicfile/MussIDenn/1.JPG')";
+				var audio = new Audio('../../../audio/mussidenn.mp3');
+				audio.play();
+			}
+		</script>
+		<script>
+			function music1() {
+				document.getElementById('music').style.backgroundImage =
+					"url('musicfile/MussIDenn/1.JPG')";
+				var audio = new Audio('../../../audio/Muss_I_Denn1.mp3');
+				audio.play();
+			}
+			
 			const record = document.getElementById('record');
 			const stop = document.getElementById('stop');
 			const soundClips = document.getElementById('sound-clips');
@@ -115,10 +147,11 @@
 							const clipContainer = document.createElement('article');
 							const clipLabel = document.createElement('p');
 							const audio = document.createElement('audio');
-							const deleteButton = document.createElement('button'); //.classname = 'button';
+							const deleteButton = document.createElement('button');//.classname = 'button';
 
 							clipContainer.classList.add('clip');
 							audio.setAttribute('controls', '');
+							//deleteButton.classname = 'button';
 							deleteButton.innerHTML = '삭제하기';
 
 							clipContainer.appendChild(audio);
@@ -148,35 +181,6 @@
 					.catch((err) => {
 						console.log('The following error occurred: ' + err);
 					});
-			}
-		</script>
-		<script>
-			function doremi() {
-				document.getElementById('music').style.height = '120vh';
-				document.getElementById('music').style.backgroundImage =
-					"url('musicfile/doremisong/1.JPG')";
-				var audio = new Audio('../../../audio/doremi.mp3');
-				audio.play();
-				//	document.getElementById(button).style.visibility = "hidden";
-				setTimeout(
-					() =>
-						(document.getElementById('music').style.backgroundImage =
-							"url('musicfile/doremisong/2.JPG')"),
-					32000
-				);
-				setTimeout(
-					() =>
-						(document.getElementById('music').style.backgroundImage =
-							"url('musicfile/doremisong/3.JPG')"),
-					//   document.getElementById(button).style.visibility = "visible",
-					62000
-				);
-			}
-			function doremi1() {
-				document.getElementById('music').style.backgroundImage =
-					"url('https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FkPqsU%2Fbtq5xuClPLA%2FukBQyFPxePdRZobsVXrsMk%2Fimg.jpg')";
-				var audio = new Audio('../../../audio/doremi1.mp3');
-				audio.play();
 			}
 		</script>
 	</body>
