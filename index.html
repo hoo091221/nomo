@@ -182,120 +182,100 @@
 				</center>
 				<center>
 					<div class="place">
-					<a
-					   class="mbtn"
-						href="study/korean/1.html"
-						style="
-							color: #000;
-							background-color: #ff0000;
-						"
-					>
-						국어 <i class="fa-solid fa-book"></i>
-					</a>
-					<a
-					   class="mbtn"
-						href="study/math/1.html"
-						style="
-							color: #000;
-							background-color: #ffa500;
-						"
-					>
-						수학 <i class="fa-solid fa-superscript"></i>
-					</a>
-					<a
-					   class="mbtn"
-						href="study/chinese/1.html"
-						style="
-							color: #000;
-							background-color: #fffa82;
-						"
-					>
-						한문 文
-					</a>
-					<a
-					   class="mbtn"
-						href="study/science/1.html"
-						style="
-							color: #000;
-							background-color: #46aa46;
-						"
-					>
-						과학 <i class="fa-solid fa-flask"></i>
-					</a>
-					<a
-					   class="mbtn"
-						href="study/social_studies/1.html"
-						style="
-							color: #000;
-							background-color: #41cdcd;
-						"
-					>
-						사회 <i class="fa-solid fa-share-nodes"></i>
-					</a>
-					<a
-					   class="mbtn"
-						href="study/tech_home/1.html"
-						style="
-							color: #000;
-							background-color: #dd78f6;
-						"
-					>
-						기가 <i class="fa-solid fa-house"></i>
-					</a>
-					<a
-					   class="mbtn"
-						href="study/english/1.html"
-						style="
-							color: #000;
-							background-color: #9400d3;
-						"
-						id="ebtn"
-					>
-						영어 A
-					</a>
-					<a
-					   class="mbtn"
-						href="study/nostudy/1.html"
-						style="
-							color: #000;
-							background: linear-gradient(to bottom, green, yellow);
-						"
-					>
-						휴식 <i class="fa-solid fa-hand-peace"></i>
-					</a>
-					<a
-					   class="mbtn"
-						href="study/artphy/1.html"
-						style="
-							background: linear-gradient(to right, yellow, red);
-							color: #fff;
-							font-size: 4.5vw;
-						"
-					>
-						예체능 <i class="fa-solid fa-person-walking"></i>
-					</a>
-				<!-- </center>
+						<a
+							class="mbtn"
+							href="study/korean/1.html"
+							style="color: #000; background-color: #ff0000;"
+						>
+							국어 <i class="fa-solid fa-book"></i>
+						</a>
+						<a
+							class="mbtn"
+							href="study/math/1.html"
+							style="color: #000; background-color: #ffa500;"
+						>
+							수학 <i class="fa-solid fa-superscript"></i>
+						</a>
+						<a
+							class="mbtn"
+							href="study/chinese/1.html"
+							style="color: #000; background-color: #fffa82;"
+						>
+							한문 文
+						</a>
+						<a
+							class="mbtn"
+							href="study/science/1.html"
+							style="color: #000; background-color: #46aa46;"
+						>
+							과학 <i class="fa-solid fa-flask"></i>
+						</a>
+						<a
+							class="mbtn"
+							href="study/social_studies/1.html"
+							style="color: #000; background-color: #41cdcd;"
+						>
+							사회 <i class="fa-solid fa-share-nodes"></i>
+						</a>
+						<a
+							class="mbtn"
+							href="study/tech_home/1.html"
+							style="color: #000; background-color: #dd78f6;"
+						>
+							기가 <i class="fa-solid fa-house"></i>
+						</a>
+						<a
+							class="mbtn"
+							href="study/english/1.html"
+							style="color: #000; background-color: #9400d3;"
+							id="ebtn"
+						>
+							영어 A
+						</a>
+						<a
+							class="mbtn"
+							href="study/nostudy/1.html"
+							style="
+								color: #000;
+								background: linear-gradient(to bottom, green, yellow);
+							"
+						>
+							휴식 <i class="fa-solid fa-hand-peace"></i>
+						</a>
+						<a
+							class="mbtn"
+							href="study/artphy/1.html"
+							style="
+								background: linear-gradient(to right, yellow, red);
+								color: #fff;
+								font-size: 4.5vw;
+							"
+						>
+							예체능 <i class="fa-solid fa-person-walking"></i>
+						</a>
+						<!-- </center>
 			</div>
 			<div class="2box">
 				<center> -->
-					<div id="time" class="time"></div>
-					<div id="date" class="date"></div>
-					<div id="weekend" class="weekend"></div>
-					<div id="menu" class="menu"></div>
-					<div id="weather" class="weather"></div>
+						<div id="time" class="time"></div>
+						<div id="date" class="date"></div>
+						<div id="weekend" class="weekend"></div>
+						<div id="menu" class="menu"></div>
+						<div id="weather" class="weather"></div>
 					</div>
 				</center>
 			</div>
 		</div>
-		<audio id="audio">
-		</audio>
+		<a class="topbtn" id="topbtn" href="#TOP"
+			> .</a>
+		<audio id="audio"></audio>
 		<script src="//code.jquery.com/jquery.min.js"></script>
 		<script>
 			function sound() {
 				var randomNumber = Math.floor(Math.random() * 4);
 				var audio = 'bgm' + randomNumber + '.mp3';
 				console.log(audio);
-				const audioplayer = document.getElementById("audio");
+				const audioplayer = document.getElementById('audio');
 				audioplayer.src = 'audio/' + audio;
 				audioplayer.play();
 			}
@@ -522,5 +502,30 @@
 			}
 			bg();
 		</script>
+		<script>
+			window.addEventListener('scroll', (event) => {
+				let scrollY = this.scrollY;
+				console.log(scrollY);
+				if (scrollY == "0") {
+					document.getElementById("topbtn").style.visibility = "hidden";
+				} else {
+					document.getElementById("topbtn").style.visibility = "visible";
+				}
+			});
+		</script>
+		<!-- <script>
+			var ani = 0;
+			
+			right.addEventListener('click', function() {
+				
+				var tt = setInterval(function() {
+					ani+=1;
+					if(ani>=200) {
+						clearInterval(tt)
+					}
+					clock.style.transform = "translateX("+ani+"px)";
+				},5)
+			})
+		</script> -->
 	</body>
 </html>

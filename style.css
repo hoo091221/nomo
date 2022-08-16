@@ -19,9 +19,24 @@ body {
 	float: left;
 }
 
+
+/* .mbtn:hover {
+  background-color: blue;
+} */
+
+.topbtn {
+	visibility: hidden;
+	position: fixed; /* 이 부분을 고정 */
+	bottom: 0;
+	margin: 2vw;
+	width: 10vw;
+	height: 10vw;
+	background-image: url('img/TOP.png');
+	background-size: 10vw;
+}
+
 .place {
 	background-color: rgba(0, 0, 0, 0.5);
-	/* background-color: #000; */
 	padding: 3vw;
 	width: 90vw;
 	height: 100vw;
