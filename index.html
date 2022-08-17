@@ -271,14 +271,21 @@
 		<script src="//code.jquery.com/jquery.min.js"></script>
 		<script>
 			function sound() {
-				var randomNumber = Math.floor(Math.random() * 4);
+				var randomNumber = Math.floor(Math.random() * 6);
 				var audio = 'bgm' + randomNumber + '.mp3';
-				console.log(audio);
 				const audioplayer = document.getElementById('audio');
 				audioplayer.src = 'audio/' + audio;
 				audioplayer.play();
 			}
 			sound();
+		</script>
+		<script>
+			function bg() {
+				var randomNumber = Math.floor(Math.random() * 10);
+				document.body.style.backgroundImage =
+					'url(img/background' + randomNumber + '.jpg' + ')';
+			}
+			bg();
 		</script>
 		<script>
 			function snowcolor() {
@@ -493,15 +500,6 @@
 			snowcolor(); //나뭇잎색깔
 		</script>
 		<script>
-			//배경이미지
-			function bg() {
-				var randomNumber = Math.floor(Math.random() * 10);
-				document.body.style.backgroundImage =
-					'url(' + 'img/background' + randomNumber + '.jpg' + ')';
-			}
-			bg();
-		</script>
-		<script>
 			window.addEventListener('scroll', (event) => {
 				let scrollY = this.scrollY;
 				console.log(scrollY);
@@ -512,19 +510,5 @@
 				}
 			});
 		</script>
-		<!-- <script>
-			var ani = 0;
-			
-			right.addEventListener('click', function() {
-				
-				var tt = setInterval(function() {
-					ani+=1;
-					if(ani>=200) {
-						clearInterval(tt)
-					}
-					clock.style.transform = "translateX("+ani+"px)";
-				},5)
-			})
-		</script> -->
 	</body>
 </html>
