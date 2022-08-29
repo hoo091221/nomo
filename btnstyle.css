@@ -12,6 +12,14 @@ table, th, td {
 	color: green;
 }
 
+.chi {
+	font-family: 'Jua', sans-serif;
+	font-size: 10vw;
+	color: black;
+	padding: 0px;
+	margin: 0px;
+}
+
 .playbutton {
 	background-color: #AAFFFF;
 	font-family: 'Jua', sans-serif;
@@ -25,6 +33,8 @@ table, th, td {
 h1 {
 	font-family: 'Jua', sans-serif;
 	font-size: 5vw;
+	padding: 0px;
+	margin: 0px;
 }
 
 .red {
