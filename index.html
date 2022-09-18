@@ -26,6 +26,22 @@
 		<title>nomo</title>
 	</head>
 	<body style="font-size: 0px;">
+		<style>
+			.mbtn {
+				text-decoration-line: none;
+				margin: 2vw;
+				padding: 3vw;
+				font-size: 5vw;
+				font-family: 'Jua', sans-serif;
+				border-radius: 2vw;
+				outline: 0;
+				border: 0;
+				display: block;
+				width: 90vw;
+				height: 10vw;
+				//float: left;
+			}
+		</style>
 		<div name="snowflake" class="snowflake" style="z-index=5"></div>
 		<div name="snowflake" class="snowflake" style="z-index=5"></div>
 		<div name="snowflake" class="snowflake" style="z-index=5"></div>
@@ -156,7 +172,7 @@
 				<li><a href="download.html">숙제 받기</a></li>
 			</ul>
 		</nav>
-		<div class="weekendbackground" id="weekendbackground" style="z-index: 2">
+		<div class="weekendbackground" id="weekendbackground" style="z-index: 2;">
 			<div class="1box" style="margin-bottom: 10vw;">
 				<center>
 					<img
@@ -252,7 +268,6 @@
 				</center>
 			</div>
 		</div>
-		<a class="topbtn" id="topbtn" href="#TOP"></a>
 		<audio id="audio"></audio>
 		<script src="//code.jquery.com/jquery.min.js"></script>
 		<script>
@@ -430,7 +445,7 @@
 					document.getElementsByName('snowflake')[48].style.backgroundColor = '#50B4F5';
 					document.getElementsByName('snowflake')[49].style.backgroundColor = '#50B4F5';
 					document.getElementsByName('snowflake')[50].style.backgroundColor = '#50B4F5';
-				} else if (month >= 9 && month < 11) {
+				} else if (month >= 11 && month < 12) {
 					document.getElementsByName('snowflake')[1].style.backgroundColor = '#CD1039';
 					document.getElementsByName('snowflake')[2].style.backgroundColor = '#CD1039';
 					document.getElementsByName('snowflake')[3].style.backgroundColor = '#CD1039';
@@ -484,17 +499,6 @@
 				}
 			}
 			snowcolor(); //나뭇잎색깔
-		</script>
-		<script>
-			window.addEventListener('scroll', (event) => {
-				let scrollY = this.scrollY;
-				console.log(scrollY);
-				if (scrollY == "0") {
-					document.getElementById("topbtn").style.visibility = "hidden";
-				} else {
-					document.getElementById("topbtn").style.visibility = "visible";
-				}
-			});
 		</script>
 	</body>
 </html>
