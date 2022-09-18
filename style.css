@@ -14,8 +14,13 @@ body {
 	outline: 0;
 	border: 0;
 	display: block;
+<<<<<<< HEAD
 	width: 25vw;
 	height: 20vw;
+=======
+	width: 23vw;
+	height: 15vw;
+>>>>>>> ff94fb7a2a9653676069dee027d8d2f194497004
 	float: left;
 }
 
@@ -38,8 +43,13 @@ body {
 .place {
 	background-color: rgba(0, 0, 0, 0.5);
 	padding: 3vw;
+<<<<<<< HEAD
 	width: 100vw;
 	//border-radius: 5vh;
+=======
+	width: 90vw;
+	border-radius: 5vh;
+>>>>>>> ff94fb7a2a9653676069dee027d8d2f194497004
 }
 
 .weekendbackground {
