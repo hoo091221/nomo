@@ -5,7 +5,12 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="../../btnstyle.css" />
-	<link rel="icon" sizes="57x57" href="../../img/nomoNlogo.png">
+		<link rel="icon" sizes="57x57" href="../../img/nomoNlogo.png" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.css"
+		/>
+		<script src="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.js"></script>
 		<title>nomo</title>
 	</head>
 	<body>
@@ -18,33 +23,126 @@
 			빛의 삼원색
 		</h1>
 		<h1 class="text4">
-			빛의 삼원색은 빛의 기본이 되는 세 가지 색이다.<br>
-			바로 <span style="color: red">빨강</span>, <span style="color: green">초록</span>, <span style="color: blue">파랑</span> 이 세 가지 색이며, 전자 기기는 
-			이 세 가지 색을 이용해서 수많은 색들을 만들어낸다. 물감을 섞는 <span style="color: red">색의 삼원색</span>과는 다른 개념이다. 색의 삼원색은 섞을수록 어두워지지만 빛의 삼원색은 섞을수록 밝아진다.
+			빛의 삼원색은 빛의 기본이 되는 세 가지 색이다.<br />
+			바로 <span style="color: red;">빨강</span>, <span style="color: green;">초록</span>,
+			<span style="color: blue;">파랑</span> 이 세 가지 색이며, 전자 기기는 이 세 가지 색을
+			이용해서 수많은 색들을 만들어낸다. 물감을 섞는
+			<span style="color: red;">색의 삼원색</span>과는 다른 개념이다. 색의 삼원색은 섞을수록
+			어두워지지만 빛의 삼원색은 섞을수록 밝아진다.
 		</h1>
 		<h1 class="text4 bluetext">
 			삼원색의 조합
 		</h1>
 		<h1 class="text4">
-			<span style="color : red">빨강</span> + <span style="color : green">초록</span> = <span style="color : rgba(255,255,0); background-color: #000;padding: 1vw;border-radius:1vw;">노랑</span>
+			<span style="color: red;">빨강</span> + <span style="color: green;">초록</span> =
+			<span
+				style="
+					color: rgba(255, 255, 0);
+					background-color: #000;
+					padding: 1vw;
+					border-radius: 1vw;
+				"
+				>노랑</span
+			>
 		</h1>
 		<h1 class="text4">
-			<span style="color : green">초록</span> + <span style="color : blue">파랑</span> = <span style="color : rgba(0,255,255);">민트</span>
+			<span style="color: green;">초록</span> + <span style="color: blue;">파랑</span> =
+			<span style="color: rgba(0, 255, 255);">민트</span>
 		</h1>
 		<h1 class="text4">
-			<span style="color : red">빨강</span> + <span style="color : blue">파랑</span> = <span style="color : rgba(255,0,255);">자홍</span>
+			<span style="color: red;">빨강</span> + <span style="color: blue;">파랑</span> =
+			<span style="color: rgba(255, 0, 255);">자홍</span>
 		</h1>
 		<h1 class="text4">
-			<span style="color : red">빨강</span> + <span style="color : green">초록</span> + <span style="color : blue">파랑</span> = <span style="color : rgba(255,255,255); background-color: #000;padding: 1vw;border-radius:1vw;">하양(백색광이라고도 함)</span>
+			<span style="color: red;">빨강</span> + <span style="color: green;">초록</span> +
+			<span style="color: blue;">파랑</span> =
+			<span
+				style="
+					color: rgba(255, 255, 255);
+					background-color: #000;
+					padding: 1vw;
+					border-radius: 1vw;
+				"
+				>하양(백색광이라고도 함)</span
+			>
 		</h1>
-		<h1 class="text4">
-			(아무 빛도 없음) = <span style="color : rgba(0,0,0);">검정</span>
-		</h1>
+		<h1 class="text4">(아무 빛도 없음) = <span style="color: rgba(0, 0, 0);">검정</span></h1>
 		<h1 class="text4 bluetext">
 			빛의 순서
 		</h1>
 		<h1 class="text4">
 			광원에서 나온 빛이 물체에 닿은 후 반사된 색이 우리 눈에 들어와 보이는 물체의 색이 된다.
 		</h1>
+		<!-- <div class="slidecontainer">
+			<input type="range" min="1" max="100" value="50" class="slider" id="myRange" />
+			<p>Value: <span id="value"></span></p>
+		</div>
+		<script>
+			var slider = document.getElementById('myRange');
+			var output = document.getElementById('value');
+			output.innerHTML = slider.value;
+
+			slider.oninput = function () {
+				output.innerHTML = this.value;
+			};
+		</script>
+		<script>
+			var slider = document.getElementById('myRange');
+			var output = document.getElementById('value');
+			output.innerHTML = slider.value;
+
+			slider.oninput = function () {
+				output.innerHTML = this.value;
+			};
+		</script>
+		<script>
+			var slider = document.getElementById('myRange');
+			var output = document.getElementById('value');
+			output.innerHTML = slider.value;
+
+			slider.oninput = function () {
+				output.innerHTML = this.value;
+			};
+		</script>
+		<style>
+			body {
+				margin: 0 auto;
+			}
+
+			.slidecontainer {
+				width: 100%;
+				margin-top: 100px;
+			}
+
+			.slider {
+				-webkit-appearance: none; /* 기본 CSS 스타일을 적용하지 않기 위해서 */
+				width: 100%; /* 슬라이더 길이 */
+				height: 15px; /* 슬라이더 두께 */
+				border-radius: 5px; /* 슬라이더 모서리를 약간 둥글게 */
+				background: #ccc; /* 슬라이더 색상 */
+				outline: none; /* 슬라이더 테두리 없이 */
+			}
+
+			/* 슬라이더 핸들(클릭해서 드래그하는 부분) 커스텀 
+(Chrome, Opera, Safari, Edge 브라우저를 위해서는 -webkit-을,
+Firefox 브라우저를 위해서는 -moz- 를 사용하세요 */
+			.slider::-webkit-slider-thumb {
+				-webkit-appearance: none; /* 기본 CSS 스타일을 적용하지 않기 위해서 */
+				appearance: none; /* 기본 CSS 스타일을 적용하지 않기 위해서 */
+				width: 25px; /* 슬라이더 핸들 길이 */
+				height: 25px; /* 슬라이더 핸들 높이 */
+				border-radius: 50%; /* 핸들 모양을 원모양으로 만들기 위함 */
+				background: #00f; /* 슬라이더 핸들 색상 */
+				cursor: pointer; /* 슬라이더 핸들에 마우스를 갖다대면 포인터로 변경 */
+			}
+
+			.slider::-moz-range-thumb {
+				width: 25px; /* 슬라이더 핸들 길이 */
+				height: 25px; /* 슬라이더 핸들 높이 */
+				border-radius: 50%; /* 핸들 모양을 원모양으로 만들기 위함 */
+				background: #00f; /* 슬라이더 핸들 색상 */
+				cursor: pointer; /* 슬라이더 핸들에 마우스를 갖다대면 포인터로 변경 */
+			} -->
+		</style>
 	</body>
 </html>
