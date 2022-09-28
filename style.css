@@ -14,16 +14,10 @@ body {
 	outline: 0;
 	border: 0;
 	display: block;
-	height: 20vw;
 	width: 23vw;
 	height: 15vw;
 	float: left;
 }
-
-
-/* .mbtn:hover {
-  background-color: blue;
-} */
 
 .topbtn {
 	visibility: hidden;
@@ -39,7 +33,6 @@ body {
 .place {
 	background-color: rgba(0, 0, 0, 0.5);
 	padding: 3vw;
-	width: 100vw;
 	border-radius: 5vh;
 	width: 90vw;
 	border-radius: 5vh;
