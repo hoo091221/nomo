@@ -71,6 +71,10 @@ function lunch() {
 			var menu =
 				"<span style='font-size: 3vw;'>오늘의 급식 메뉴<br></span><span style='font-size: 2.5vw;'>휴일이네요!<br><br><br><br><br><br></span>";
 			m.innerHTML = menu;
+		} else if (menu == "<span style='font-size: 3vw;'>내일의 급식 메뉴<br></span>") {
+			var menu =
+				"<span style='font-size: 3vw;'>내일의 급식 메뉴<br></span><span style='font-size: 2.5vw;'>휴일이네요!<br><br><br><br><br><br></span>";
+			m.innerHTML = menu;
 		}
 	};
 	request.send();
