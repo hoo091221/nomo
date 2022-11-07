@@ -5,6 +5,7 @@ table, th, td {
 	width: 90vw;
 	height: 5vh;
 	font-size: 3vw;
+	text-align: center;
 }
 
 .ex {
