@@ -1,972 +1,274 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<script src="https://kit.fontawesome.com/90a3894fee.js" crossorigin="anonymous"></script>
+		<!-- JQuery -->
 		<script
 			src="https://code.jquery.com/jquery-3.6.0.min.js"
 			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 			crossorigin="anonymous"
 		></script>
-		<script src="lunch.json"></script>
-		<!-- <script src="snowcolor.json"></script> -->
-		<script src="time.json"></script>
+		<!-- Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Fontawesome -->
+		<script src="https://kit.fontawesome.com/90a3894fee.js" crossorigin="anonymous"></script>
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
 			integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
 			crossorigin="anonymous"
 		/>
-		<link rel="stylesheet" href="style.css" />
+		<!-- CSS -->
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/btnstyle.css" />
+		<link rel="stylesheet" href="./css/navbar.css" />
+		<link rel="stylesheet" href="./css/snowflake.css" />
+		<link rel="stylesheet" href="./css/font.css" />
+		<link rel="stylesheet" href="./css/cards.css" />
+		<!-- 모바일 뷰포트 -->
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" sizes="57x57" href="img/nomoNlogo.png" />
+		<!-- 타이틀 -->
 		<title>nomo</title>
+		<link rel="icon" sizes="57x57" href="img/nomoNlogo.png" />
+		<!-- Bootstrap -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+			crossorigin="anonymous"
+		/>
 	</head>
-	<body>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<div name="snowflake" class="snowflake" style="z-index: 5;"></div>
-		<style>
-			.navbar {
-				z-index: 2;
-				position: fixed;
-				width: 100vw;
-				background-color: #fff;
-				font-family: 'Jua', sans-serif;
-				font-size: 2vw;
-				display: flex;
-				align-items: center;
-			}
-			ul {
-				list-style: none;
-				margin: 0px;
-				padding: 0px;
-			}
-			li {
-				margin: 0 0 0 0;
-				padding: 0 0 0 0;
-				border: 0;
-				float: left;
-			}
-			.navbar a {
-				color: #000;
-				text-decoration: none;
-				margin-right: 5vw;
-			}
-			::-webkit-scrollbar {
-				display: none;
-			}
-			/* body {
-				background-image: url(img/background0.jpg);
-				background-repeat: no-repeat;
-				background-size: 200vw 400vh;
-				margin: 0px;
-			} */
 
-			.date {
-				font-family: 'Jua', sans-serif;
-				font-size: 2vw;
-				color: #fff;
-			}
-			.time {
-				font-family: 'Jua', sans-serif;
-				margin-top: 5vw;
-				font-size: 10vw;
-				font-weight: bold;
-				color: #fff;
-			}
-			.weekend {
-				font-family: 'Jua', sans-serif;
-				font-size: 2vw;
-				font-weight: bold;
-				color: #fff;
-			}
-			.menu {
-				margin-top: 5vw;
-				font-family: 'Jua', sans-serif;
-				font-size: 2vw;
-				font-weight: bold;
-				color: #fff;
-			}
-			.tell {
-				margin-top: 5vw;
-				font-family: 'Jua', sans-serif;
-				font-size: 4vw;
-				font-weight: bold;
-				color: #fff;
-			}
-			body {
-				background-size: cover;
-			}
-		</style>
-		<nav class="navbar">
+	<!-- body start -->
+
+	<body>
+		<!-- 눈 내리는 효과 -->
+
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+		<div name="snowflake" class="snowflake" style="z-index: 5"></div>
+
+		<!-- navbar -->
+
+		<nav class="nav" style="z-index: 10">
 			<div class="navbarlogo">
 				<a href="">
-					<img src="img/nomoNlogo.png" style="margin: 1vw; width: 2vw;" />
+					<img src="img/nomoNlogo.png" style="margin: 1vw; width: 2vw" />
 				</a>
 			</div>
 			<ul class="navbarmenu">
-				<li><a href="javascript:sound();">노래 변경!</a></li>
-				<li><a href="javascript:bg();">배경 변경!</a></li>
-				<li><a href="https://hcs.eduro.go.kr/#/main">자가진단</a></li>
+				<li><a href="javascript:sound();">음악 변경</a></li>
+				<li><a href="javascript:bg();">배경 변경</a></li>
 				<li><a href="sorce.html">자료출처</a></li>
 				<li><a href="download.html">숙제 받기</a></li>
 			</ul>
 		</nav>
-		<div class="weekendbackground" id="weekendbackground" style="z-index: 2;">
-			<div class="1box" style="margin-bottom: 10vw;">
-				<center>
+		<div class="weekendbackground" id="weekendbackground" style="z-index: 2">
+			<div class="darkness">
+				<!-- 로고 -->
+
+				<center style="width: 100vw; height: auto">
 					<img
 						src="img/nomo.png"
 						style="
 							z-index: 1;
 							width: 70vw;
-							opacity: 0.6;
+							opacity: 0.5;
 							margin-top: 10vw;
 							margin-bottom: 5vw;
 						"
 					/>
 				</center>
+
+				<!-- 메뉴 시작 -->
+
 				<center>
-					<div class="place">
-						<a
-							class="mbtn"
-							href="study/korean/1.html"
-							style="color: #000; background-color: #ff0000; float: left;"
-							target="_blank"
-						   >
-							국어 <i class="fa-solid fa-book"></i>
+					<center>
+					<div class="full">
+						<a class="mbtn" href="study/korean/1.html">
+							<div class="card red" style="width: 18rem">
+								<img src="./img/korean.jpeg" class="card-img-top" alt="..." />
+								<div class="card-body">
+									<h5 class="card-title">
+										국어 <i class="fa-solid fa-book"></i>
+									</h5>
+									<p class="card-text">국어 노트를 보시려면 클릭하세요.</p>
+								</div>
+							</div>
 						</a>
-						<a
-							class="mbtn"
-							href="study/math/1.html"
-							style="color: #000; background-color: #ffa500; float: left;"
-							target="_blank"
-						   >
-							수학 <i class="fa-solid fa-superscript"></i>
+						<a class="mbtn" href="study/math/1.html">
+							<div class="card orange" style="width: 18rem">
+								<img src="./img/math.webp" class="card-img-top" alt="..." />
+								<div class="card-body">
+									<h5 class="card-title">
+										수학 <i class="fa-solid fa-superscript"></i>
+									</h5>
+									<p class="card-text">수학 노트를 보시려면 클릭하세요.</p>
+								</div>
+							</div>
 						</a>
-						<a
-							class="mbtn"
-							href="study/chinese/1.html"
-							style="color: #000; background-color: #fffa82; float: left;"
-							target="_blank"
-						   >
-							한문 文
+						<a class="mbtn" href="study/chinese/1.html">
+							<div class="card yellow" style="width: 18rem">
+								<img
+									src="https://cdn.pixabay.com/photo/2017/07/26/18/01/china-2542574_960_720.jpg"
+									class="card-img-top"
+									alt="..."
+								/>
+								<div class="card-body">
+									<h5 class="card-title">한문 文</h5>
+									<p class="card-text">한문 노트를 보시려면 클릭하세요.</p>
+								</div>
+							</div>
 						</a>
-						<a
-							class="mbtn"
-							href="study/environment/1.html"
-							style="color: #000; background-color: #9EF048; float: left;"
-							target="_blank"
-						   >
-							환경 <i class="fa-solid fa-tree"></i>
+						<a class="mbtn" href="study/science/1.html"
+							><div class="card green" style="width: 18rem">
+								<img src="./img/science.webp" class="card-img-top" alt="..." />
+								<div class="card-body">
+									<h5 class="card-title">
+										과학 <i class="fa-solid fa-flask"></i>
+									</h5>
+									<p class="card-text">과학 노트를 보시려면 클릭하세요.</p>
+								</div>
+							</div>
 						</a>
-						<a
-							class="mbtn"
-							href="study/science/1.html"
-							style="color: #000; background-color: #46aa46; float: left;"
-							target="_blank"
-						   >
-							과학 <i class="fa-solid fa-flask"></i>
+						<a class="mbtn" href="study/social_studies/1.html"
+							><div class="card cyan" style="width: 18rem">
+								<img src="./img/social_study.webp" class="card-img-top" alt="..." />
+								<div class="card-body">
+									<h5 class="card-title">
+										사회 <i class="fa-solid fa-share-nodes"></i>
+									</h5>
+									<p class="card-text">사회 노트를 보시려면 클릭하세요.</p>
+								</div>
+							</div>
 						</a>
-						<a
-							class="mbtn"
-							href="study/social_studies/1.html"
-							style="color: #000; background-color: #41cdcd; float: left;"
-							target="_blank"
-						   >
-							사회 <i class="fa-solid fa-share-nodes"></i><br>
+						<a class="mbtn" href="study/tech_home/1.html">
+							<div class="card pink" style="width: 18rem">
+								<img src="./img/tech_home.jpeg" class="card-img-top" alt="..." />
+								<div class="card-body">
+									<h5 class="card-title">
+										기가 <i class="fa-solid fa-house"></i>
+									</h5>
+									<p class="card-text">기가 노트를 보시려면 클릭하세요.</p>
+								</div>
+							</div>
 						</a>
-						<a
-							class="mbtn"
-							href="study/history/1.html"
-							style="color: #000; background-color: #0064FF; float: left;"
-							target="_blank"
-						   >
-							역사 <i class="fa-solid fa-clock-rotate-left"></i>
+						<a class="mbtn" href="study/english/1.html">
+							<div class="card purple" style="width: 18rem">
+								<img src="./img/english.jpeg" class="card-img-top" alt="..." />
+								<div class="card-body">
+									<h5 class="card-title">영어 A</h5>
+									<p class="card-text">영어 노트를 보시려면 클릭하세요.</p>
+								</div>
+							</div>
 						</a>
-						<a
-							class="mbtn"
-							href="study/tech_home/1.html"
-							style="color: #000; background-color: #dd78f6; float: left;"
-							target="_blank"
-						   >
-							기가 <i class="fa-solid fa-house"></i>
+						<a class="mbtn" href="study/nostudy/1.html">
+							<div class="card yellowgreen" style="width: 18rem">
+								<img
+									src="./img/nostudybackround.jpg"
+									class="card-img-top"
+									alt="..."
+								/>
+								<div class="card-body">
+									<h5 class="card-title">
+										기타 <i class="fa-solid fa-hand-peace"></i>
+									</h5>
+									<p class="card-text">기타 노트를 보시려면 클릭하세요.</p>
+								</div>
+							</div>
 						</a>
-						<a
-							class="mbtn"
-							href="study/english/1.html"
-							style="color: #000; background-color: #9400d3; float: left;"
-							target="_blank"
-							>
-							영어 A
+						<a class="mbtn" href="study/artphy/1.html">
+							<div class="card redyellow" style="width: 18rem">
+								<img src="./img/artphy.jpg" class="card-img-top" alt="..." />
+								<div class="card-body">
+									<h5 class="card-title">
+										예체능 <i class="fa-solid fa-person-walking"></i>
+									</h5>
+									<p class="card-text">노트를 보시려면 클릭하세요.</p>
+								</div>
+							</div>
 						</a>
-						<a
-							class="mbtn"
-							href="study/information/1.html"
-							style="color: #000; background-color: #aaa; float: left;"
-							target="_blank"
-						   >
-							정보 <i class="fa-solid fa-gear"></i>
-						</a>
-						<a
-							class="mbtn"
-							href="study/nostudy/1.html"
-							style="
-								color: #000;
-								background: linear-gradient(to bottom, green, yellow);
-								float: left;
-							"
-						   target="_blank"
-						>
-							휴식 <i class="fa-solid fa-hand-peace"></i>
-						</a>
-						<a
-							class="mbtn"
-							href="study/artphy/1.html"
-							style="
-								background: linear-gradient(to right, yellow, red);
-								float: left;
-								color: #fff;
-								font-size: 4.5vw;
-							"
-						   target="_blank"
-						>
-							예체능 <i class="fa-solid fa-person-walking"></i>
-						</a>
-						<div id="time" class="time"></div>
-						<div id="date" class="date"></div>
-						<div id="weekend" class="weekend"></div>
-						<div id="menu" class="menu"></div>
-						<div id="tell" class="tell"></div>
-						<div id="weather" class="weather"></div>
 					</div>
+					</center>
+
+						<!-- 부가적인 요소들  -->
+
+						<center style="float: none">
+							<div id="time" class="time subtext"></div>
+							<div id="date" class="date subtext"></div>
+							<div id="weekend" class="weekend subtext"></div>
+							<div id="menu" class="menu subtext"></div>
+							<div id="tell" class="tell subtext"></div>
+							<div id="weather" class="weather subtext"></div>
+						</center>
 				</center>
 			</div>
 		</div>
+
+		<!-- TOPBTN -->
+
 		<a class="topbtn" id="topbtn" href="#TOP"></a>
+
+		<!-- 음악 재생 -->
+
 		<audio id="audio"></audio>
-		<script src="//code.jquery.com/jquery.min.js"></script>
-		<script>
-			function sound() {
-				var randomNumber = Math.floor(Math.random() * 6);
-				var audio = 'bgm' + randomNumber + '.mp3';
-				const audioplayer = document.getElementById('audio');
-				audioplayer.src = 'audio/' + audio;
-				audioplayer.play();
-			}
-			sound();
-		</script>
-		<script>
-			function bg() {
-				var randomNumber = Math.floor(Math.random() * 10);
-				document.body.style.backgroundImage =
-					'url(img/background' + randomNumber + '.jpg' + ')';
-			}
-			bg();
-		</script>
-		<script>
-			window.addEventListener('scroll', (event) => {
-				let scrollY = this.scrollY;
-				if (scrollY == '0') {
-					document.getElementById('topbtn').style.visibility = 'hidden';
-				} else {
-					document.getElementById('topbtn').style.visibility = 'visible';
-				}
-			});
-		</script>
-		<script>
-			function tell() {
-				const tell = [
-					'노력을 한다고 모두 잘 되진 않지만, 잘 됐던 자는 모두 노력을 했다.',
-					'신중하지 않으면 기회를 놓칠 수 있다.',
-					'어느 일의 가치는 그 일을 실천하는 데에 있다.',
-					'삶의 원동력은 어떤 일을 하고자 하는 욕망이다.',
-					'기준이 나에게 맞지 않으면 내가 기준이 되자.',
-					'당연한 것에도 "왜 아닐까?" 해보자.',
-					'모든 완벽한 일은 그 과정이 어렵다.',
-					'실수를 한 적이 없다는 것은 새로운 것을 시도하지 않았다는 뜻이다.',
-					'어제를 후회하지 말고 내일을 만들어보자!',
-					'늦게 피는 꽃은 있어도 피지 않는 꽃은 없다!',
-					'힘들면 쉬면서 가자.',
-					'천천히 가더라도 도착만 하자!',
-					'일단 시작하자! 그게 천재성이고, 힘이며, 마력이다!',
-					'시작하면 끝을 보도록 노력하자.',
-					'험한 산에 오르려면 처음에는 천천히 걸어가야 한다.'
-				];
-				function randomValueFromArray(array) {
-					const random = Math.floor(Math.random() * array.length);
-					return array[random];
-				}
-				let nice = randomValueFromArray(tell);
-
-				const m = document.getElementById('tell');
-				m.innerHTML = '오늘의 명언<br><small>' + nice + '</small>';
-			}
-			tell();
-		</script>
-		<script>
-			function snowcolor() {
-				var dateInfo = new Date();
-				var month = dateInfo.getMonth() + 1;
-				if (month >= 3 && month < 4) {
-					document.getElementsByName('snowflake')[1].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[2].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[3].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[4].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[5].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[6].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[7].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[8].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[9].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[10].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[11].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[12].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[13].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[14].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[15].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[16].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[17].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[18].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[19].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[20].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[21].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[22].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[23].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[24].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[25].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[26].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[27].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[28].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[29].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[30].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[31].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[32].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[33].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[34].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[35].style.backgroundColor = '#FFA8A5';
-					document.getElementsByName('snowflake')[36].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[37].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[38].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[39].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[40].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[41].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[42].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[43].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[44].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[45].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[46].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[47].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[48].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[49].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[50].style.backgroundColor = '#8AE634';
-				} else if (month >= 4 && month < 6) {
-					document.getElementsByName('snowflake')[1].style.backgroundColor = '#1E821E';
-					document.getElementsByName('snowflake')[2].style.backgroundColor = '#1E821E';
-					document.getElementsByName('snowflake')[3].style.backgroundColor = '#1E821E';
-					document.getElementsByName('snowflake')[4].style.backgroundColor = '#1E821E';
-					document.getElementsByName('snowflake')[5].style.backgroundColor = '#1E821E';
-					document.getElementsByName('snowflake')[6].style.backgroundColor = '#1E821E';
-					document.getElementsByName('snowflake')[7].style.backgroundColor = '#1E821E';
-					document.getElementsByName('snowflake')[8].style.backgroundColor = '#1E821E';
-					document.getElementsByName('snowflake')[9].style.backgroundColor = '#1E821E';
-					document.getElementsByName('snowflake')[10].style.backgroundColor = '#1E821E';
-					document.getElementsByName('snowflake')[11].style.backgroundColor = '#1E821E';
-					document.getElementsByName('snowflake')[12].style.backgroundColor = '#1E821E';
-					document.getElementsByName('snowflake')[13].style.backgroundColor = '#1E821E';
-					document.getElementsByName('snowflake')[14].style.backgroundColor = '#1E821E';
-					document.getElementsByName('snowflake')[15].style.backgroundColor = '#1E821E';
-					document.getElementsByName('snowflake')[16].style.backgroundColor = '#1E821E';
-					document.getElementsByName('snowflake')[17].style.backgroundColor = '#1E821E';
-					document.getElementsByName('snowflake')[18].style.backgroundColor = '#1E821E';
-					document.getElementsByName('snowflake')[19].style.backgroundColor = '#1E821E';
-					document.getElementsByName('snowflake')[20].style.backgroundColor = '#1E821E';
-					document.getElementsByName('snowflake')[21].style.backgroundColor = '#1E821E';
-					document.getElementsByName('snowflake')[22].style.backgroundColor = '#1E821E';
-					document.getElementsByName('snowflake')[23].style.backgroundColor = '#1E821E';
-					document.getElementsByName('snowflake')[24].style.backgroundColor = '#1E821E';
-					document.getElementsByName('snowflake')[25].style.backgroundColor = '#1E821E';
-					document.getElementsByName('snowflake')[26].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[27].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[28].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[29].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[30].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[31].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[32].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[33].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[34].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[35].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[36].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[37].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[38].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[39].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[40].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[41].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[42].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[43].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[44].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[45].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[46].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[47].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[48].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[49].style.backgroundColor = '#8AE634';
-					document.getElementsByName('snowflake')[50].style.backgroundColor = '#8AE634';
-				} else if (month >= 6 && month < 7) {
-					document.getElementsByName('snowflake')[1].style.backgroundColor = '#0A6ECD';
-					document.getElementsByName('snowflake')[2].style.backgroundColor = '#0A6ECD';
-					document.getElementsByName('snowflake')[3].style.backgroundColor = '#0A6ECD';
-					document.getElementsByName('snowflake')[4].style.backgroundColor = '#0A6ECD';
-					document.getElementsByName('snowflake')[5].style.backgroundColor = '#0A6ECD';
-					document.getElementsByName('snowflake')[6].style.backgroundColor = '#0A6ECD';
-					document.getElementsByName('snowflake')[7].style.backgroundColor = '#0A6ECD';
-					document.getElementsByName('snowflake')[8].style.backgroundColor = '#0A6ECD';
-					document.getElementsByName('snowflake')[9].style.backgroundColor = '#0A6ECD';
-					document.getElementsByName('snowflake')[10].style.backgroundColor = '#0A6ECD';
-					document.getElementsByName('snowflake')[11].style.backgroundColor = '#0A6ECD';
-					document.getElementsByName('snowflake')[12].style.backgroundColor = '#0A6ECD';
-					document.getElementsByName('snowflake')[13].style.backgroundColor = '#0A6ECD';
-					document.getElementsByName('snowflake')[14].style.backgroundColor = '#0A6ECD';
-					document.getElementsByName('snowflake')[15].style.backgroundColor = '#0A6ECD';
-					document.getElementsByName('snowflake')[16].style.backgroundColor = '#0A6ECD';
-					document.getElementsByName('snowflake')[17].style.backgroundColor = '#0A6ECD';
-					document.getElementsByName('snowflake')[18].style.backgroundColor = '#0A6ECD';
-					document.getElementsByName('snowflake')[19].style.backgroundColor = '#0A6ECD';
-					document.getElementsByName('snowflake')[20].style.backgroundColor = '#0A6ECD';
-					document.getElementsByName('snowflake')[21].style.backgroundColor = '#0A6ECD';
-					document.getElementsByName('snowflake')[22].style.backgroundColor = '#0A6ECD';
-					document.getElementsByName('snowflake')[23].style.backgroundColor = '#0A6ECD';
-					document.getElementsByName('snowflake')[24].style.backgroundColor = '#0A6ECD';
-					document.getElementsByName('snowflake')[25].style.backgroundColor = '#0A6ECD';
-					document.getElementsByName('snowflake')[26].style.backgroundColor = '#50B4F5';
-					document.getElementsByName('snowflake')[27].style.backgroundColor = '#50B4F5';
-					document.getElementsByName('snowflake')[28].style.backgroundColor = '#50B4F5';
-					document.getElementsByName('snowflake')[29].style.backgroundColor = '#50B4F5';
-					document.getElementsByName('snowflake')[30].style.backgroundColor = '#50B4F5';
-					document.getElementsByName('snowflake')[31].style.backgroundColor = '#50B4F5';
-					document.getElementsByName('snowflake')[32].style.backgroundColor = '#50B4F5';
-					document.getElementsByName('snowflake')[33].style.backgroundColor = '#50B4F5';
-					document.getElementsByName('snowflake')[34].style.backgroundColor = '#50B4F5';
-					document.getElementsByName('snowflake')[35].style.backgroundColor = '#50B4F5';
-					document.getElementsByName('snowflake')[36].style.backgroundColor = '#50B4F5';
-					document.getElementsByName('snowflake')[37].style.backgroundColor = '#50B4F5';
-					document.getElementsByName('snowflake')[38].style.backgroundColor = '#50B4F5';
-					document.getElementsByName('snowflake')[39].style.backgroundColor = '#50B4F5';
-					document.getElementsByName('snowflake')[40].style.backgroundColor = '#50B4F5';
-					document.getElementsByName('snowflake')[41].style.backgroundColor = '#50B4F5';
-					document.getElementsByName('snowflake')[42].style.backgroundColor = '#50B4F5';
-					document.getElementsByName('snowflake')[43].style.backgroundColor = '#50B4F5';
-					document.getElementsByName('snowflake')[44].style.backgroundColor = '#50B4F5';
-					document.getElementsByName('snowflake')[45].style.backgroundColor = '#50B4F5';
-					document.getElementsByName('snowflake')[46].style.backgroundColor = '#50B4F5';
-					document.getElementsByName('snowflake')[47].style.backgroundColor = '#50B4F5';
-					document.getElementsByName('snowflake')[48].style.backgroundColor = '#50B4F5';
-					document.getElementsByName('snowflake')[49].style.backgroundColor = '#50B4F5';
-					document.getElementsByName('snowflake')[50].style.backgroundColor = '#50B4F5';
-				} else if (month >= 10 && month < 12) {
-					document.getElementsByName('snowflake')[1].style.backgroundColor = '#CD1039';
-					document.getElementsByName('snowflake')[2].style.backgroundColor = '#CD1039';
-					document.getElementsByName('snowflake')[3].style.backgroundColor = '#CD1039';
-					document.getElementsByName('snowflake')[4].style.backgroundColor = '#CD1039';
-					document.getElementsByName('snowflake')[5].style.backgroundColor = '#CD1039';
-					document.getElementsByName('snowflake')[6].style.backgroundColor = '#CD1039';
-					document.getElementsByName('snowflake')[7].style.backgroundColor = '#CD1039';
-					document.getElementsByName('snowflake')[8].style.backgroundColor = '#CD1039';
-					document.getElementsByName('snowflake')[9].style.backgroundColor = '#CD1039';
-					document.getElementsByName('snowflake')[10].style.backgroundColor = '#CD1039';
-					document.getElementsByName('snowflake')[11].style.backgroundColor = '#CD1039';
-					document.getElementsByName('snowflake')[12].style.backgroundColor = '#CD1039';
-					document.getElementsByName('snowflake')[13].style.backgroundColor = '#CD1039';
-					document.getElementsByName('snowflake')[14].style.backgroundColor = '#CD1039';
-					document.getElementsByName('snowflake')[15].style.backgroundColor = '#CD1039';
-					document.getElementsByName('snowflake')[16].style.backgroundColor = '#CD1039';
-					document.getElementsByName('snowflake')[17].style.backgroundColor = '#CD1039';
-					document.getElementsByName('snowflake')[18].style.backgroundColor = '#CD1039';
-					document.getElementsByName('snowflake')[19].style.backgroundColor = '#CD1039';
-					document.getElementsByName('snowflake')[20].style.backgroundColor = '#CD1039';
-					document.getElementsByName('snowflake')[21].style.backgroundColor = '#CD1039';
-					document.getElementsByName('snowflake')[22].style.backgroundColor = '#CD1039';
-					document.getElementsByName('snowflake')[23].style.backgroundColor = '#CD1039';
-					document.getElementsByName('snowflake')[24].style.backgroundColor = '#CD1039';
-					document.getElementsByName('snowflake')[25].style.backgroundColor = '#CD1039';
-					document.getElementsByName('snowflake')[26].style.backgroundColor = '#FFE146';
-					document.getElementsByName('snowflake')[27].style.backgroundColor = '#FFE146';
-					document.getElementsByName('snowflake')[28].style.backgroundColor = '#FFE146';
-					document.getElementsByName('snowflake')[29].style.backgroundColor = '#FFE146';
-					document.getElementsByName('snowflake')[30].style.backgroundColor = '#FFE146';
-					document.getElementsByName('snowflake')[31].style.backgroundColor = '#FFE146';
-					document.getElementsByName('snowflake')[32].style.backgroundColor = '#FFE146';
-					document.getElementsByName('snowflake')[33].style.backgroundColor = '#FFE146';
-					document.getElementsByName('snowflake')[34].style.backgroundColor = '#FFE146';
-					document.getElementsByName('snowflake')[35].style.backgroundColor = '#FFE146';
-					document.getElementsByName('snowflake')[36].style.backgroundColor = '#FFE146';
-					document.getElementsByName('snowflake')[37].style.backgroundColor = '#FFE146';
-					document.getElementsByName('snowflake')[38].style.backgroundColor = '#FFE146';
-					document.getElementsByName('snowflake')[39].style.backgroundColor = '#FFE146';
-					document.getElementsByName('snowflake')[40].style.backgroundColor = '#FFE146';
-					document.getElementsByName('snowflake')[41].style.backgroundColor = '#FFE146';
-					document.getElementsByName('snowflake')[42].style.backgroundColor = '#FFE146';
-					document.getElementsByName('snowflake')[43].style.backgroundColor = '#FFE146';
-					document.getElementsByName('snowflake')[44].style.backgroundColor = '#FFE146';
-					document.getElementsByName('snowflake')[45].style.backgroundColor = '#FFE146';
-					document.getElementsByName('snowflake')[46].style.backgroundColor = '#FFE146';
-					document.getElementsByName('snowflake')[47].style.backgroundColor = '#FFE146';
-					document.getElementsByName('snowflake')[48].style.backgroundColor = '#FFE146';
-					document.getElementsByName('snowflake')[49].style.backgroundColor = '#FFE146';
-					document.getElementsByName('snowflake')[50].style.backgroundColor = '#FFE146';
-				} else if (month >= 12 && month < 13) {
-					document.getElementsByName('snowflake')[1].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[1].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[1].style.width = '2vw';
-					document.getElementsByName('snowflake')[2].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[2].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[2].style.width = '2vw';
-					document.getElementsByName('snowflake')[3].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[3].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[3].style.width = '2vw';
-					document.getElementsByName('snowflake')[4].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[4].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[4].style.width = '2vw';
-					document.getElementsByName('snowflake')[5].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[5].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[5].style.width = '2vw';
-					document.getElementsByName('snowflake')[6].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[6].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[6].style.width = '2vw';
-					document.getElementsByName('snowflake')[7].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[7].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[7].style.width = '2vw';
-					document.getElementsByName('snowflake')[8].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[8].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[8].style.width = '2vw';
-					document.getElementsByName('snowflake')[9].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[9].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[9].style.width = '2vw';
-					document.getElementsByName('snowflake')[10].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[10].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[10].style.width = '2vw';
-					document.getElementsByName('snowflake')[11].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[11].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[11].style.width = '2vw';
-					document.getElementsByName('snowflake')[12].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[12].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[12].style.width = '2vw';
-					document.getElementsByName('snowflake')[13].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[13].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[13].style.width = '2vw';
-					document.getElementsByName('snowflake')[14].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[14].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[14].style.width = '2vw';
-					document.getElementsByName('snowflake')[15].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[15].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[15].style.width = '2vw';
-					document.getElementsByName('snowflake')[16].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[16].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[16].style.width = '2vw';
-					document.getElementsByName('snowflake')[17].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[17].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[17].style.width = '2vw';
-					document.getElementsByName('snowflake')[18].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[18].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[18].style.width = '2vw';
-					document.getElementsByName('snowflake')[19].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[19].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[19].style.width = '2vw';
-					document.getElementsByName('snowflake')[20].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[20].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[20].style.width = '2vw';
-					document.getElementsByName('snowflake')[21].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[21].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[21].style.width = '2vw';
-					document.getElementsByName('snowflake')[22].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[22].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[22].style.width = '2vw';
-					document.getElementsByName('snowflake')[23].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[23].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[23].style.width = '2vw';
-					document.getElementsByName('snowflake')[24].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[24].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[24].style.width = '2vw';
-					document.getElementsByName('snowflake')[25].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[25].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[25].style.width = '2vw';
-					document.getElementsByName('snowflake')[26].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[26].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[26].style.width = '2vw';
-					document.getElementsByName('snowflake')[27].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[27].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[27].style.width = '2vw';
-					document.getElementsByName('snowflake')[28].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[28].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[28].style.width = '2vw';
-					document.getElementsByName('snowflake')[29].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[29].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[29].style.width = '2vw';
-					document.getElementsByName('snowflake')[30].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[30].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[30].style.width = '2vw';
-					document.getElementsByName('snowflake')[31].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[31].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[31].style.width = '2vw';
-					document.getElementsByName('snowflake')[32].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[32].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[32].style.width = '2vw';
-					document.getElementsByName('snowflake')[33].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[33].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[33].style.width = '2vw';
-					document.getElementsByName('snowflake')[34].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[34].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[34].style.width = '2vw';
-					document.getElementsByName('snowflake')[35].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[35].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[35].style.width = '2vw';
-					document.getElementsByName('snowflake')[36].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[36].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[36].style.width = '2vw';
-					document.getElementsByName('snowflake')[37].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[37].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[37].style.width = '2vw';
-					document.getElementsByName('snowflake')[38].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[38].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[38].style.width = '2vw';
-					document.getElementsByName('snowflake')[39].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[39].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[39].style.width = '2vw';
-					document.getElementsByName('snowflake')[40].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[40].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[40].style.width = '2vw';
-					document.getElementsByName('snowflake')[41].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[41].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[41].style.width = '2vw';
-					document.getElementsByName('snowflake')[42].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[42].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[42].style.width = '2vw';
-					document.getElementsByName('snowflake')[43].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[43].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[43].style.width = '2vw';
-					document.getElementsByName('snowflake')[44].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[44].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[44].style.width = '2vw';
-					document.getElementsByName('snowflake')[45].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[45].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[45].style.width = '2vw';
-					document.getElementsByName('snowflake')[46].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[46].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[46].style.width = '2vw';
-					document.getElementsByName('snowflake')[47].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[47].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[47].style.width = '2vw';
-					document.getElementsByName('snowflake')[48].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[48].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[58].style.width = '2vw';
-					document.getElementsByName('snowflake')[49].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[49].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[49].style.width = '2vw';
-					document.getElementsByName('snowflake')[50].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[50].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[50].style.width = '2vw';
-				} else {
-					document.getElementsByName('snowflake')[1].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[1].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[1].style.width = '2vw';
-					document.getElementsByName('snowflake')[2].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[2].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[2].style.width = '2vw';
-					document.getElementsByName('snowflake')[3].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[3].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[3].style.width = '2vw';
-					document.getElementsByName('snowflake')[4].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[4].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[4].style.width = '2vw';
-					document.getElementsByName('snowflake')[5].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[5].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[5].style.width = '2vw';
-					document.getElementsByName('snowflake')[6].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[6].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[6].style.width = '2vw';
-					document.getElementsByName('snowflake')[7].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[7].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[7].style.width = '2vw';
-					document.getElementsByName('snowflake')[8].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[8].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[8].style.width = '2vw';
-					document.getElementsByName('snowflake')[9].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[9].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[9].style.width = '2vw';
-					document.getElementsByName('snowflake')[10].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[10].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[10].style.width = '2vw';
-					document.getElementsByName('snowflake')[11].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[11].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[11].style.width = '2vw';
-					document.getElementsByName('snowflake')[12].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[12].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[12].style.width = '2vw';
-					document.getElementsByName('snowflake')[13].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[13].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[13].style.width = '2vw';
-					document.getElementsByName('snowflake')[14].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[14].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[14].style.width = '2vw';
-					document.getElementsByName('snowflake')[15].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[15].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[15].style.width = '2vw';
-					document.getElementsByName('snowflake')[16].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[16].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[16].style.width = '2vw';
-					document.getElementsByName('snowflake')[17].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[17].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[17].style.width = '2vw';
-					document.getElementsByName('snowflake')[18].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[18].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[18].style.width = '2vw';
-					document.getElementsByName('snowflake')[19].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[19].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[19].style.width = '2vw';
-					document.getElementsByName('snowflake')[20].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[20].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[20].style.width = '2vw';
-					document.getElementsByName('snowflake')[21].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[21].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[21].style.width = '2vw';
-					document.getElementsByName('snowflake')[22].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[22].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[22].style.width = '2vw';
-					document.getElementsByName('snowflake')[23].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[23].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[23].style.width = '2vw';
-					document.getElementsByName('snowflake')[24].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[24].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[24].style.width = '2vw';
-					document.getElementsByName('snowflake')[25].style.backgroundColor = '#FFFFFF';
-					document.getElementsByName('snowflake')[25].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[25].style.width = '2vw';
-					document.getElementsByName('snowflake')[26].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[26].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[26].style.width = '2vw';
-					document.getElementsByName('snowflake')[27].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[27].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[27].style.width = '2vw';
-					document.getElementsByName('snowflake')[28].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[28].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[28].style.width = '2vw';
-					document.getElementsByName('snowflake')[29].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[29].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[29].style.width = '2vw';
-					document.getElementsByName('snowflake')[30].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[30].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[30].style.width = '2vw';
-					document.getElementsByName('snowflake')[31].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[31].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[31].style.width = '2vw';
-					document.getElementsByName('snowflake')[32].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[32].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[32].style.width = '2vw';
-					document.getElementsByName('snowflake')[33].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[33].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[33].style.width = '2vw';
-					document.getElementsByName('snowflake')[34].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[34].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[34].style.width = '2vw';
-					document.getElementsByName('snowflake')[35].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[35].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[35].style.width = '2vw';
-					document.getElementsByName('snowflake')[36].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[36].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[36].style.width = '2vw';
-					document.getElementsByName('snowflake')[37].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[37].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[37].style.width = '2vw';
-					document.getElementsByName('snowflake')[38].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[38].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[38].style.width = '2vw';
-					document.getElementsByName('snowflake')[39].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[39].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[39].style.width = '2vw';
-					document.getElementsByName('snowflake')[40].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[40].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[40].style.width = '2vw';
-					document.getElementsByName('snowflake')[41].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[41].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[41].style.width = '2vw';
-					document.getElementsByName('snowflake')[42].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[42].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[42].style.width = '2vw';
-					document.getElementsByName('snowflake')[43].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[43].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[43].style.width = '2vw';
-					document.getElementsByName('snowflake')[44].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[44].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[44].style.width = '2vw';
-					document.getElementsByName('snowflake')[45].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[45].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[45].style.width = '2vw';
-					document.getElementsByName('snowflake')[46].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[46].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[46].style.width = '2vw';
-					document.getElementsByName('snowflake')[47].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[47].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[47].style.width = '2vw';
-					document.getElementsByName('snowflake')[48].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[48].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[58].style.width = '2vw';
-					document.getElementsByName('snowflake')[49].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[49].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[49].style.width = '2vw';
-					document.getElementsByName('snowflake')[50].style.backgroundColor = '#d2d2d2';
-					document.getElementsByName('snowflake')[50].style.borderRadius =
-						'100% 100% 100% 100%';
-					document.getElementsByName('snowflake')[50].style.width = '2vw';
-				}
-			}
-
-			snowcolor(); //나뭇잎색깔
-		</script>
+		
+		<!-- JS -->
+		<script rel="text/javascript" src="./javascript/lunch.js"></script>
+		<script rel="text/javascript" src="./javascript/snowcolor.js"></script>
+		<script rel="text/javascript" src="./javascript/sound-bg.js"></script>
+		<script rel="text/javascript" src="./javascript/time.js"></script>
+		<script rel="text/javascript" src="./javascript/tell.js"></script>
+		<script rel="text/javascript" src="./javascript/topbtn.js"></script>
 	</body>
 </html>
